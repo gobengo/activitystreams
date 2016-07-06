@@ -153,6 +153,117 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #999;
     }
   </style>
+  <style>
+    /* --- ISSUES/NOTES --- */
+    
+    div.issue-title,
+    div.note-title,
+    div.ednote-title,
+    div.warning-title {
+      padding-right: 1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+    
+    div.issue-title {
+      color: #e05252;
+    }
+    
+    div.note-title,
+    div.ednote-title {
+      color: #2b2;
+    }
+    
+    div.warning-title {
+      color: #f22;
+    }
+    
+    div.issue-title span,
+    div.note-title span,
+    div.ednote-title span,
+    div.warning-title span {
+      text-transform: uppercase;
+    }
+    
+    div.note,
+    div.issue,
+    div.ednote,
+    div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    
+    .note> p:first-child,
+    .ednote> p:first-child,
+    .issue> p:first-child,
+    .warning> p:first-child {
+      margin-top: 0
+    }
+    
+    .issue,
+    .note,
+    .ednote,
+    .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+    }
+    
+    div.issue,
+    div.note,
+    div.ednote,
+    div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+    
+    span.note,
+    span.ednote,
+    span.issue,
+    span.warning {
+      padding: .1em .5em .15em;
+    }
+    
+    .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+    }
+    
+    .note,
+    .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+    }
+    
+    .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+    }
+    
+    .warning-title:before {
+      content: "⚠";
+      /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+    }
+    
+    li.task-list-item {
+      list-style: none;
+    }
+    
+    input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
   <style id="respec-mainstyle">
     /*****************************************************************
  * ReSpec 3 CSS
@@ -384,7 +495,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       ],
       "maxTocLevel": 2,
       "previousMaturity": "WD",
-      "previousPublishDate": "2016-05-31",
+      "previousPublishDate": "2016-07-06",
       "wg": "Social Web Working Group",
       "wgURI": "http://www.w3.org/Social/WG",
       "wgPublicList": "public-socialweb",
@@ -454,7 +565,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <dt>Implementation report:</dt>
       <dd><a href="https://github.com/w3c/activitystreams/tree/master/implementation-reports">https://github.com/w3c/activitystreams/tree/master/implementation-reports</a></dd>
       <dt>Previous version:</dt>
-      <dd><a rel="dcterms:replaces" href="http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160531/">http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160531/</a></dd>
+      <dd><a rel="dcterms:replaces" href="http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160706/">http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160706/</a></dd>
       <dt>Editors:</dt>
       <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0" data-editor-id="26988"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="James M Snell"><a class="u-url url p-name fn" property="foaf:homepage" href="http://jasnell.me">James M Snell</a>, IBM</span>
         <span property="rdf:rest" resource="_:editor1"></span>
@@ -553,6 +664,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a>
         <ul class="toc">
           <li class="tocline"><a href="#termconventions" class="tocxref"><span class="secno">1.1 </span>Conventions</a></li>
+          <li class="tocline"><a href="#atrisk" class="tocxref"><span class="secno">1.2 </span>At Risk features</a></li>
         </ul>
       </li>
       <li class="tocline"><a href="#types" class="tocxref"><span class="secno">2. </span>Core Classes</a></li>
@@ -639,6 +751,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         The examples included in this document use the normative JSON serialization defined by this specification.
       </p>
 
+    </section>
+
+    <section id="atrisk" typeof="bibo:Chapter" resource="#atrisk" property="bibo:hasPart">
+      <h3 id="h-atrisk" resource="#h-atrisk"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>At Risk features</span></h3>
+      <p>The Working Group has marked one group of terms as At Risk and may seek to advance the specification with the removal of these terms if insufficient implementation experience can be gathered.</p>
+      <p>In particular, the <a href="#dfn-relationship" class="internalDFN" data-link-type="dfn">Relationship</a> type and <a href="#dfn-relationship" class="internalDFN" data-link-type="dfn">relationship</a> property, as well as the normative vocabulary for relationship terms are marked At Risk.</p>
     </section>
 
   </section>
@@ -2766,6 +2884,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <p>
                 See <a href="#connections" class="sec-ref"><span class="secno">5.2</span> <span class="sec-title">Representing Relationships Between Entities</span></a> for additional information.
               </p>
+              <div class="note">
+                <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span><span style="text-transform: none">: At Risk</span></div>
+                <p class="">
+                  The Relationship type is At Risk. The Working Group believes this type to be useful and well-founded. However, if insufficient evidence of implementation can be obtained during the Candidate Recommendation period then the Working Group may seek to advance the specification with this type omitted.
+                </p>
+              </div>
             </td>
           </tr>
           <tr>
