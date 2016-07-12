@@ -552,10 +552,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Activity Vocabulary</h1>
-    <h2 id="w3c-working-draft-06-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-06">06 July 2016</time></h2>
+    <h2 id="w3c-working-draft-12-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-12">12 July 2016</time></h2>
     <dl>
       <dt>This version:</dt>
-      <dd><a class="u-url" href="http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160706/">http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160706/</a></dd>
+      <dd><a class="u-url" href="http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160712/">http://www.w3.org/TR/2016/WD-activitystreams-vocabulary-20160712/</a></dd>
       <dt>Latest published version:</dt>
       <dd><a href="http://www.w3.org/TR/activitystreams-vocabulary/">http://www.w3.org/TR/activitystreams-vocabulary/</a></dd>
       <dt>Latest editor's draft:</dt>
@@ -755,8 +755,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     <section id="atrisk" typeof="bibo:Chapter" resource="#atrisk" property="bibo:hasPart">
       <h3 id="h-atrisk" resource="#h-atrisk"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>At Risk features</span></h3>
-      <p>The Working Group has marked one group of terms as At Risk and may seek to advance the specification with the removal of these terms if insufficient implementation experience can be gathered.</p>
-      <p>In particular, the <a href="#dfn-relationship" class="internalDFN" data-link-type="dfn">Relationship</a> type and <a href="#dfn-relationship" class="internalDFN" data-link-type="dfn">relationship</a> property, as well as the normative vocabulary for relationship terms are marked At Risk.</p>
+      <p>The Working Group has marked some features as
+        <a href="../activitystreams-core/#atrisk">At Risk</a> and may seek to advance the specification with the removal of these terms if insufficient implementation experience can be gathered.</p>
     </section>
 
   </section>
@@ -5215,7 +5215,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   <span class="hljs-string">"type"</span>: <span class="hljs-string">"Note"</span>,
   <span class="hljs-string">"contentMap"</span>: {
     <span class="hljs-string">"en"</span>: <span class="hljs-string">"A &lt;i&gt;simple&lt;/i&gt; note"</span>,
-    <span class="hljs-string">"sp"</span>: <span class="hljs-string">"Una &lt;i&gt;simple&lt;/i&gt; nota"</span>
+    <span class="hljs-string">"es"</span>: <span class="hljs-string">"Una nota &lt;i&gt;sencilla&lt;/i&gt;"</span>,
+    <span class="hljs-string">"zh-Hans"</span>: <span class="hljs-string">"一&lt;i&gt;个简单的&lt;/i&gt;音符"</span>
   }
 }</pre></div>
             </div>
@@ -5275,7 +5276,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   <span class="hljs-string">"type"</span>: <span class="hljs-string">"Note"</span>,
   <span class="hljs-string">"nameMap"</span>: {
     <span class="hljs-string">"en"</span>: <span class="hljs-string">"A simple note"</span>,
-    <span class="hljs-string">"sp"</span>: <span class="hljs-string">"Una simple nota"</span>
+    <span class="hljs-string">"es"</span>: <span class="hljs-string">"Una nota sencilla"</span>,
+    <span class="hljs-string">"zh-Hans"</span>: <span class="hljs-string">"一个简单的音符"</span>
   }
 }</pre></div>
             </div>
@@ -5318,7 +5320,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <tr>
           <td>Notes:</td>
           <td>
-            When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the <code><a href="#dfn-duration" class="internalDFN" data-link-type="dfn">duration</a></code> property indicates the object's approximate duration. The value <em class="rfc2119" title="MUST">MUST</em> be expressed as an [<cite><a class="bibref" href="#bib-RFC3339">RFC3339</a></cite>] (ISO 8601) <code>duration</code> (e.g. a period of 5 seconds is represented as "<code>PT5S</code>").
+            When the object describes a time-bound resource, such as an audio or video, a meeting, etc, the <code><a href="#dfn-duration" class="internalDFN" data-link-type="dfn">duration</a></code> property indicates the object's approximate duration. The value <em class="rfc2119" title="MUST">MUST</em> be expressed as an <code>xsd:duration</code> as defined by [
+            <cite><a class="bibref" href="#bib-xmlschema11-2">xmlschema11-2</a></cite>], section 3.3.6 (e.g. a period of 5 seconds is represented as "<code>PT5S</code>").
           </td>
         </tr>
         <tr>
@@ -5433,7 +5436,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <tr>
           <td>Notes:</td>
           <td>
-            Hints as to the language used by the target resource. Value <em class="rfc2119" title="MUST">MUST</em> be a [<cite><a class="bibref" href="#bib-RFC5646">RFC5646</a></cite>] Language-Tag.
+            Hints as to the language used by the target resource. Value <em class="rfc2119" title="MUST">MUST</em> be a [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tag.
           </td>
         </tr>
         <tr>
@@ -5442,7 +5445,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </tr>
         <tr>
           <td>Range:</td>
-          <td>[<cite><a class="bibref" href="#bib-RFC5646">RFC5646</a></cite>] Language Tag</td>
+          <td>[<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language Tag</td>
         </tr>
         <tr>
           <td>Functional:</td>
@@ -5886,7 +5889,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   <span class="hljs-string">"type"</span>: <span class="hljs-string">"Note"</span>,
   <span class="hljs-string">"summaryMap"</span>: {
     <span class="hljs-string">"en"</span>: <span class="hljs-string">"A simple &lt;i&gt;note&lt;/i&gt;"</span>,
-    <span class="hljs-string">"sp"</span>: <span class="hljs-string">"Una simple &lt;i&gt;nota&lt;/i&gt;"</span>
+    <span class="hljs-string">"es"</span>: <span class="hljs-string">"Una &lt;i&gt;nota&lt;/i&gt; sencilla"</span>,
+    <span class="hljs-string">"zh-Hans"</span>: <span class="hljs-string">"一个简单的&lt;i&gt;音符&lt;/i&gt;"</span>
   }
 }</pre></div>
             </div>
@@ -7324,14 +7328,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     <section id="normative-references" typeof="bibo:Chapter" resource="#normative-references" property="bibo:hasPart">
       <h3 id="h-normative-references" resource="#h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">C.1 </span>Normative references</span></h3>
-      <dl class="bibliography" resource=""><dt id="bib-RFC2119">[RFC2119]</dt>
+      <dl class="bibliography" resource=""><dt id="bib-BCP47">[BCP47]</dt>
+        <dd>A. Phillips; M. Davis. IETF. <a href="https://tools.ietf.org/html/bcp47" property="dc:requires"><cite>Tags for Identifying Languages</cite></a>. September 2009. IETF Best Current Practice. URL: <a href="https://tools.ietf.org/html/bcp47" property="dc:requires">https://tools.ietf.org/html/bcp47</a>
+        </dd><dt id="bib-RFC2119">[RFC2119]</dt>
         <dd>S. Bradner. IETF. <a href="https://tools.ietf.org/html/rfc2119" property="dc:requires"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119" property="dc:requires">https://tools.ietf.org/html/rfc2119</a>
-        </dd><dt id="bib-RFC3339">[RFC3339]</dt>
-        <dd>G. Klyne; C. Newman. IETF. <a href="https://tools.ietf.org/html/rfc3339" property="dc:requires"><cite>Date and Time on the Internet: Timestamps</cite></a>. July 2002. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc3339" property="dc:requires">https://tools.ietf.org/html/rfc3339</a>
-        </dd><dt id="bib-RFC5646">[RFC5646]</dt>
-        <dd>A. Phillips, Ed.; M. Davis, Ed.. IETF. <a href="https://tools.ietf.org/html/rfc5646" property="dc:requires"><cite>Tags for Identifying Languages</cite></a>. September 2009. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc5646" property="dc:requires">https://tools.ietf.org/html/rfc5646</a>
         </dd><dt id="bib-RFC5988">[RFC5988]</dt>
         <dd>M. Nottingham. IETF. <a href="https://tools.ietf.org/html/rfc5988" property="dc:requires"><cite>Web Linking</cite></a>. October 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5988" property="dc:requires">https://tools.ietf.org/html/rfc5988</a>
+        </dd><dt id="bib-xmlschema11-2">[xmlschema11-2]</dt>
+        <dd>David Peterson; Sandy Gao; Ashok Malhotra; Michael Sperberg-McQueen; Henry Thompson; Paul V. Biron et al. W3C. <a href="https://www.w3.org/TR/xmlschema11-2/" property="dc:requires"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes</cite></a>. 5 April 2012. W3C Recommendation. URL: <a href="https://www.w3.org/TR/xmlschema11-2/" property="dc:requires">https://www.w3.org/TR/xmlschema11-2/</a>
         </dd>
       </dl>
     </section>
