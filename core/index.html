@@ -327,6 +327,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     code {
       color: #C83500;
     }
+    
+    th code {
+      color: inherit;
+    }
     /* --- TOC --- */
     
     .toc a,
@@ -548,10 +552,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Activity Streams 2.0</h1>
-    <h2 id="w3c-working-draft-12-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-12">12 July 2016</time></h2>
+    <h2 id="w3c-working-draft-26-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-26">26 July 2016</time></h2>
     <dl>
       <dt>This version:</dt>
-      <dd><a class="u-url" href="http://www.w3.org/TR/2016/WD-activitystreams-core-20160712/">http://www.w3.org/TR/2016/WD-activitystreams-core-20160712/</a></dd>
+      <dd><a class="u-url" href="http://www.w3.org/TR/2016/WD-activitystreams-core-20160726/">http://www.w3.org/TR/2016/WD-activitystreams-core-20160726/</a></dd>
       <dt>Latest published version:</dt>
       <dd><a href="http://www.w3.org/TR/activitystreams-core/">http://www.w3.org/TR/activitystreams-core/</a></dd>
       <dt>Latest editor's draft:</dt>
@@ -826,22 +830,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <ul>
         <li>All properties of the <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type, except the following:
           <ul>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-id">id</a></code></li>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code></li>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-type">type</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type">type</a></code></li>
           </ul>
         </li>
         <li>All properties of the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> type, except the following:
           <ul>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-id">id</a></code></li>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code></li>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code></li>
           </ul>
         </li>
         <li>All properties of the <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> type, except the following:
           <ul>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-actor">actor</a></code></li>
-            <li><code><a href="../activitystreams-vocabulary/#dfn-object">object</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor">actor</a></code></li>
+            <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">object</a></code></li>
           </ul>
         </li>
         <li>The <a href="#actor" class="internalDFN" data-link-type="dfn">Actor</a> type</li>
@@ -850,7 +854,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <li>All extended types
           <ul>
             <li>
-              In particular, the <code><a href="../activitystreams-vocabulary/#dfn-relationship">Relationship</a></code> type and <code>relationship</code> property, as well as the normative vocabulary for relationship terms.
+              In particular, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-relationship">Relationship</a></code> type and <code>relationship</code> property, as well as the normative vocabulary for relationship terms.
             </li>
           </ul>
         </li>
@@ -866,7 +870,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="h-syntaxconventions" resource="#h-syntaxconventions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Serialization</span></h2>
 
     <p>
-      This specification describes a JSON-based [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>] serialization syntax for the <a href="../activitystreams-vocabulary/">Activity
+      This specification describes a JSON-based [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>] serialization syntax for the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
         Vocabulary</a> that conforms to a subset of [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] syntax constraints but does not require JSON-LD processing. While other serialization forms are possible, such alternatives are not discussed by this document.
     </p>
 
@@ -988,7 +992,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         'Martin's Blog' at 3:04 PM UTC on February 10, 2015."  Some additional
         details about the article, actor and target blog are given using
         properties defined by the
-        <a href="../activitystreams-vocabulary/">Activity Streams 2.0
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Streams 2.0
         Vocabulary</a>.
       </span></figcaption>
         <div id="ex2-jsonld" style="display: block;">
@@ -1112,7 +1116,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
     <h2 id="h-model" resource="#h-model"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Model</span></h2>
 
     <p>
-      The <a href="../activitystreams-vocabulary/">Activity Vocabulary</a> normatively defines the core object types and properties for Activity Streams 2.0.
+      The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> normatively defines the core object types and properties for Activity Streams 2.0.
     </p>
 
     <p>
@@ -1139,55 +1143,55 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       A JSON object in the Activity Streams 2.0 document is a
       <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code> if either: (a) the object contains a
       <code>type</code> property whose value includes "<code>Link</code>" or (b) any of the types included in the value of the <code>type</code> property are defined as extensions of <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> (see
-      <a href="../activitystreams-vocabulary/#dfn-mention">Mention</a> for instance); otherwise the JSON object is considered an instance or extension of <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code>.
+      <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a> for instance); otherwise the JSON object is considered an instance or extension of <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code>.
     </p>
 
     <section id="object" typeof="bibo:Chapter" resource="#object" property="bibo:hasPart">
       <h3 id="h-object" resource="#h-object"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1 </span><dfn id="asobject" data-dfn-type="dfn">Object</dfn></span></h3>
 
       <p>
-        The <code><a href="../activitystreams-vocabulary/#dfn-object">Object</a></code> is the primary base type for the Activity Streams vocabulary.
+        The <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">Object</a></code> is the primary base type for the Activity Streams vocabulary.
       </p>
 
       <p>
         In addition to having a global identifier (expressed as an absolute IRI using the <code>id</code> property) and an "object type" (expressed using the <code>type</code> property), all instances of the <code>Object</code> class share a common set of properties normatively defined by the
-        <a href="../activitystreams-vocabulary/">Activity Vocabulary</a>. These include:
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. These include:
         <code>
-          <code><a href="../activitystreams-vocabulary/#dfn-attachment">attachment</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-attributedto">attributedTo</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-audience">audience</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-content-term">content</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-context">context</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-content">contentMap</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-name">nameMap</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-endtime">endTime</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-generator">generator</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-icon">icon</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-image-term">image</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-inreplyto">inReplyTo</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-location">location</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-preview">preview</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-published">published</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-replies">replies</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-starttime">startTime</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-summary">summary</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-summary">summaryMap</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-tag">tag</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-updated">updated</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-url">url</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-to">to</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-bto">bto</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-cc">cc</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-bcc">bcc</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-duration">duration</a></code>
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-attachment">attachment</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-attributedto">attributedTo</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-audience">audience</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content-term">content</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-context">context</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">contentMap</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">nameMap</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-endtime">endTime</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-generator">generator</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-icon">icon</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-inreplyto">inReplyTo</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-location">location</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-preview">preview</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-published">published</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-replies">replies</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-starttime">startTime</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summaryMap</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-tag">tag</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-updated">updated</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-url">url</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-to">to</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-bto">bto</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-cc">cc</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-bcc">bcc</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-duration">duration</a></code>
         </code>
       </p>
 
       <p>
         While all properties are optional (including the <code>id</code> and
-        <code>type</code>), all <code>Object</code> instances <em class="rfc2119" title="SHOULD">SHOULD</em> at least contain a <code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code> (or equivalent
+        <code>type</code>), all <code>Object</code> instances <em class="rfc2119" title="SHOULD">SHOULD</em> at least contain a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> (or equivalent
         <code><a href="#naturalLanguageValues">nameMap</a></code>).
       </p>
 
@@ -1216,7 +1220,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <p>
-        The <a href="../activitystreams-vocabulary/">Activity Vocabulary</a> defines a range of <code>Object</code> types that are common to many social Web applications. This specification stops short of defining semantically specific properties for most of these objects. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary.
+        The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> defines a range of <code>Object</code> types that are common to many social Web applications. This specification stops short of defining semantically specific properties for most of these objects. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary.
       </p>
 
       <p>
@@ -1225,7 +1229,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <p>
         When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. The Good Relations Vocabulary) define their own classes for describing locations. An implementation that wishes, for example, to use a
         <code><a href="http://www.heppnetz.de/ontologies/goodrelations/v1.html#Location">http://purl.org/goodrelations/v1#Location</a></code> as an object type <em class="rfc2119" title="MUST">MUST</em> also identify the object as being a
-        <code><a href="../activitystreams-vocabulary/#dfn-place">Place</a></code> as illustrated in the following:
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code> as illustrated in the following:
       </p>
 
       <figure id="fig-an-object-that-is-both-a-place-and-a-gr-location">
@@ -1264,19 +1268,19 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         The target URI of the Link is expressed using the required
-        <code><a href="../activitystreams-vocabulary/#dfn-href">href</a></code> property. In addition, all <code>Link</code> instances share the following common set of optional properties as normatively defined by the <a href="../activitystreams-vocabulary/">Activity Vocabulary</a>:
-        <code><a href="../activitystreams-vocabulary/#dfn-id">id</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-hreflang">hreflang</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-rel">rel</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-height">height</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-width">width</a></code>
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-href">href</a></code> property. In addition, all <code>Link</code> instances share the following common set of optional properties as normatively defined by the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>:
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-hreflang">hreflang</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-height">height</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-width">width</a></code>
       </p>
 
       <p>
         For example, all <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> can contain an
-        <code><a href="../activitystreams-vocabulary/#dfn-image-term">image</a></code> property whose value describes a graphical representation of the containing object. This property will typically be used to provide the URL to an image (e.g. JPEG, GIF or PNG) resource that can be displayed to the user. Any given object might have multiple such visual representations -- multiple screenshots, for instance, or the same image at different resolutions. In Activity Streams 2.0, there are essentially three ways of describing such references.
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> property whose value describes a graphical representation of the containing object. This property will typically be used to provide the URL to an image (e.g. JPEG, GIF or PNG) resource that can be displayed to the user. Any given object might have multiple such visual representations -- multiple screenshots, for instance, or the same image at different resolutions. In Activity Streams 2.0, there are essentially three ways of describing such references.
       </p>
 
       <figure id="fig-to-reference-a-single-image-without-any-additional-metadata-a-direct-association-can-be-expressed-as-a-json-string-containing-an-absolute-iri.x">
@@ -1350,7 +1354,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
 
       <p>
-        RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>, the <code><a href="../activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, A single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
+        RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, A single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
       </p>
 
       <p>
@@ -1398,22 +1402,22 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-actors" resource="#h-actors"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3 </span><dfn id="actor" data-dfn-type="dfn">Actor</dfn></span></h3>
 
       <p>
-        Actor objects are specializations of the base <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type that represent entities capable of carrying out an Activity. The <a href="../activitystreams-vocabulary/">Activity
+        Actor objects are specializations of the base <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type that represent entities capable of carrying out an Activity. The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
         Vocabulary</a> provides the normative definition of five specific types of Actors:
-        <code><a href="../activitystreams-vocabulary/#dfn-application">Application</a>
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-application">Application</a>
         </code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-group">Group</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-organization">Organization</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-person">Person</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-service">Service</a></code>.
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-service">Service</a></code>.
       </p>
 
       <p>
         This specification intentionally defines Actors in only the most generalized way, stopping short of defining semantically specific properties for each. All Actor objects are specializations of
         <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> and inherit all of the core properties common to all Objects. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary. VCard [
         <cite><a class="bibref" href="#bib-vcard-rdf">vcard-rdf</a></cite>] <em class="rfc2119" title="SHOULD">SHOULD</em> be used to provide additional metadata for
-        <a href="../activitystreams-vocabulary/#dfn-person">Person</a>,
-        <a href="../activitystreams-vocabulary/#dfn-group">Group</a>, and <a href="../activitystreams-vocabulary/#dfn-organization">Organization</a> instances.
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a>,
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a>, and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a> instances.
       </p>
 
       <figure id="fig-an-activity-with-a-person-actor-extended-with-vcard-properties">
@@ -1446,7 +1450,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         While implementations are free to introduce new types of Actors beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Actor types.
       </p>
       <p>
-        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. VCard) define their own classes for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor <em class="rfc2119" title="MUST">MUST</em> also identify that Actor as a <code><a href="../activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
+        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. VCard) define their own classes for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor <em class="rfc2119" title="MUST">MUST</em> also identify that Actor as a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
       </p>
 
     </section>
@@ -1460,13 +1464,13 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         In addition to common properties supported by all <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> instances, <code>Activity</code> objects support the following additional properties defined by the
-        <a href="../activitystreams-vocabulary/">Vocabulary</a>:
-        <code><a href="../activitystreams-vocabulary/#dfn-actor">actor</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-object-term">object</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-target">target</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-origin">origin</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-result">result</a></code> |
-        <code><a href="../activitystreams-vocabulary/#dfn-instrument">instrument</a></code>
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a>:
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor">actor</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-target">target</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-origin">origin</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-result">result</a></code> |
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-instrument">instrument</a></code>
       </p>
 
       <p>
@@ -1491,7 +1495,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <p>
-        The <a href="../activitystreams-vocabulary/">Activity Vocabulary</a> defines a small number of <code>Activity</code> types that are common to many social Web applications. This specification stops short of defining semantically specific properties for most of these activities. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary.
+        The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> defines a small number of <code>Activity</code> types that are common to many social Web applications. This specification stops short of defining semantically specific properties for most of these activities. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary.
       </p>
 
       <p>
@@ -1499,12 +1503,12 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
       <p>
         When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. Schema.org) define their own classes for describing actions. An implementation that wishes, for example, to use <code><a href="http://schema.org/LikeAction">http://schema.org/LikeAction</a></code> as an Activity <em class="rfc2119" title="MUST">MUST</em> also identify that Object as being a
-        <code><a href="../activitystreams-vocabulary/#dfn-like">Like</a></code> as illustrated in the following:
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code> as illustrated in the following:
       </p>
 
       <figure id="fig-an-activity-that-is-both-a-like-and-a-http-schema.org-likeaction">
         <figcaption>Fig. <span class="figno">12</span> <span class="fig-title">An Activity that is both a
-       <code><a href="../activitystreams-vocabulary/#dfn-like">Like</a></code>
+       <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code>
        and a <code>http://schema.org/LikeAction</code>:</span></figcaption>
         <div id="ex20-jsonld" style="display: block;">
           <div class="example">
@@ -1530,7 +1534,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <h3 id="h-intransitiveactivities" resource="#h-intransitiveactivities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span><dfn id="intransitiveactivity" data-dfn-type="dfn">IntransitiveActivity</dfn></span></h3>
 
       <p>
-        IntransitiveActivity objects are specializations of the <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> type that represent intransitive actions. IntransitiveActivity objects do not have an <code><a href="../activitystreams-vocabulary/#dfn-object-term">object</a></code> property.
+        IntransitiveActivity objects are specializations of the <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> type that represent intransitive actions. IntransitiveActivity objects do not have an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> property.
       </p>
     </section>
 
@@ -1547,11 +1551,11 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         <code><a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a></code>, all
         <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> types contain the additional properties:
         <code>
-          <a href="../activitystreams-vocabulary/#dfn-items">items</a> |
-          <a href="../activitystreams-vocabulary/#dfn-totalitems">totalItems</a> |
-          <a href="../activitystreams-vocabulary/#dfn-first">first</a> |
-          <a href="../activitystreams-vocabulary/#dfn-last">last</a> |
-          <a href="../activitystreams-vocabulary/#dfn-current">current</a>
+          <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-items">items</a> |
+          <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-totalitems">totalItems</a> |
+          <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-first">first</a> |
+          <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-last">last</a> |
+          <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-current">current</a>
         </code>
       </p>
 
@@ -1626,12 +1630,12 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
           </code> type extends from the base
           <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> type and inherits all of it's properties. The following additional properties can also be specified:
           <code>
-            <a href="../activitystreams-vocabulary/#dfn-partof">partOf</a> |
-            <a href="../activitystreams-vocabulary/#dfn-first">first</a> |
-            <a href="../activitystreams-vocabulary/#dfn-next">next</a> |
-            <a href="../activitystreams-vocabulary/#dfn-prev">prev</a> |
-            <a href="../activitystreams-vocabulary/#dfn-last">last</a> |
-            <a href="../activitystreams-vocabulary/#dfn-current">current</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-partof">partOf</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-first">first</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-next">next</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-prev">prev</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-last">last</a> |
+            <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-current">current</a> |
           </code>
         </p>
 
@@ -1658,7 +1662,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
           </code> and
           <code><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a>
           </code>. In addition to the properties inherited from each of those, the <code>OrderedCollectionPage</code> may contain an additional
-          <code><a href="../activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> property whose value indicates the relative index position of the first item contained by the page within the
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> property whose value indicates the relative index position of the first item contained by the page within the
           <code>OrderedCollection</code> to which the page belongs.
         </p>
 
@@ -1738,7 +1742,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         Several properties defined by the
-        <a href="../activitystreams-vocabulary/">Vocabulary</a> are defined as having natural language values. These are human-readable strings using one or more languages. Within the JSON serialization, they are expressed as either (1) a single JSON string or (2) a JSON object mapping well-formed [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tags to localized, equivalent translations of the same string value. In the serialized JSON, these two forms are differentiated using a simple property naming convention, for instance: "<code>name</code>" identifies the JSON string form for the <code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code> property while "<code>nameMap</code>" represents the object form.
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> are defined as having natural language values. These are human-readable strings using one or more languages. Within the JSON serialization, they are expressed as either (1) a single JSON string or (2) a JSON object mapping well-formed [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tags to localized, equivalent translations of the same string value. In the serialized JSON, these two forms are differentiated using a simple property naming convention, for instance: "<code>name</code>" identifies the JSON string form for the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> property while "<code>nameMap</code>" represents the object form.
       </p>
 
       <figure id="fig-a-single-name-string-value-without-language-information">
@@ -1774,10 +1778,10 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
 
       <p>
-        The <a href="../activitystreams-vocabulary/">Activity Vocabulary</a> defines three properties that use natural language values:
-        <code><a href="../activitystreams-vocabulary/#dfn-name">name</a></code>,
-        <code><a href="../activitystreams-vocabulary/#dfn-summary">summary</a></code>, and
-        <code><a href="../activitystreams-vocabulary/#dfn-content">content</a></code>. Accordingly, in the JSON serialization, the terms "
+        The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> defines three properties that use natural language values:
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code>,
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code>, and
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code>. Accordingly, in the JSON serialization, the terms "
         <code>name</code>", "<code>summary</code>", and "<code>content</code>" represent the JSON string forms; and the terms "
         <code>nameMap</code>", "<code>summaryMap</code>", and "
         <code>contentMap</code>" for represent the object forms.
@@ -1881,7 +1885,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         In Activity Streams 2.0, an "extension" is any property, activity, actor or object type not defined by the
-        <a href="../activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions <em class="rfc2119" title="MUST NOT">MUST NOT</em> stop processing or signal an error and <em class="rfc2119" title="MUST">MUST</em> continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions <em class="rfc2119" title="MUST NOT">MUST NOT</em> stop processing or signal an error and <em class="rfc2119" title="MUST">MUST</em> continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
       </p>
 
       <p>
@@ -1895,7 +1899,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         It is also important to note that there are valid JSON constructs which cannot be used within a JSON-LD document. For instance, JSON-LD forbids "arrays of arrays" as used, for example, by the popular
-        <a href="http://geojson.org/">GeoJSON</a> specification. While implementations are free to use such constructs as extensions within an Activity Streams 2.0 document, consumers that use the standard JSON-LD Processing Algorithms will be required to either ignore such extensions or map those to alternative compatible constructs prior to applying the JSON-LD algorithms. Simple GeoJSON Points, for instance, can be mapped to <code><a href="../activitystreams-vocabulary/#dfn-place">Place</a></code> objects, while more complex geometries can be converted to
+        <a href="http://geojson.org/">GeoJSON</a> specification. While implementations are free to use such constructs as extensions within an Activity Streams 2.0 document, consumers that use the standard JSON-LD Processing Algorithms will be required to either ignore such extensions or map those to alternative compatible constructs prior to applying the JSON-LD algorithms. Simple GeoJSON Points, for instance, can be mapped to <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code> objects, while more complex geometries can be converted to
         <a href="http://www.opengeospatial.org/standards/geosparql">GeoSparql</a> "Well-Known Text" representations as illustrated in the non-normative examples below:
       </p>
 
@@ -2397,8 +2401,8 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
         </li>
         <li>
           This document redefines the
-          <code><a href="../activitystreams-vocabulary/#dfn-content">content</a></code> and
-          <code><a href="../activitystreams-vocabulary/#dfn-summary">summary</a></code> properties as natural language values which means their values can be expressed as either a string or an object mapping language tags to string values. In the 1.0 syntax, these are expressed solely as String values. Because the 1.0 values are a valid subset allowed by this specification, implementations are not required to take any specific action to continue supporting those values.
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-content">content</a></code> and
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-summary">summary</a></code> properties as natural language values which means their values can be expressed as either a string or an object mapping language tags to string values. In the 1.0 syntax, these are expressed solely as String values. Because the 1.0 values are a valid subset allowed by this specification, implementations are not required to take any specific action to continue supporting those values.
         </li>
         <li>
           This document redefines a large number of common properties defined originally as Objects in 1.0 as either
@@ -2411,12 +2415,12 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
         </li>
         <li>
           In Activity Streams 1.0, the "<code>post</code>" verb was defined to describe the action of both creating an object and "posting" or uploading it to a service. This specification replaces the "<code>post</code>" verb with separate
-          <code><a href="../activitystreams-vocabulary/#dfn-create">Create</a></code> and
-          <code><a href="../activitystreams-vocabulary/#dfn-add">Add</a></code> Activity types. When processing Activity Streams 1.0 documents and converting those into 2.0, implementations <em class="rfc2119" title="SHOULD">SHOULD</em> treat instances of the "
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code> and
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code> Activity types. When processing Activity Streams 1.0 documents and converting those into 2.0, implementations <em class="rfc2119" title="SHOULD">SHOULD</em> treat instances of the "
           <code>post</code>" verb as equivalent to
-          <code><a href="../activitystreams-vocabulary/#dfn-create">Create</a></code>
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code>
           <i>if there is no <code>target</code> property specified</i>; and equivalent to
-          <code><a href="../activitystreams-vocabulary/#dfn-add">Add</a></code>
+          <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code>
           <i>if there is a <code>target</code> property specified</i>.
         </li>
       </ol>
