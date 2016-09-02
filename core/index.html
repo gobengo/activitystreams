@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr" typeof="bibo:Document w3p:CR" prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta lang="" property="dc:language" content="en">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <meta property="dc:language" content="en" lang="">
   <style>
     /*
 
@@ -468,12 +468,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #FFF;
     }
   </style>
-  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/W3C-CR" rel="stylesheet">
   <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 5.0.0">
-  <script id="initialUserConfig" type="application/json">
+  <meta content="ReSpec 5.0.0" name="generator">
+  <script type="application/json" id="initialUserConfig">
     {
       "specStatus": "CR",
+      "crEnd": "2016-09-20",
       "license": "w3c-software-doc",
       "edDraftURI": "http://w3c.github.io/activitystreams/core/",
       "testSuiteURI": "https://github.com/w3c/activitystreams/tree/master/test",
@@ -500,7 +501,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "wg": "Social Web Working Group",
       "wgURI": "http://www.w3.org/Social/WG",
       "wgPublicList": "public-socialweb",
-      "wgPatentURI": "http://www.w3.org/2004/01/pp-impl/72531/status",
+      "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/72531/status",
       "localBiblio":
       {
         "AS1":
@@ -547,16 +548,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </script>
 </head>
-<body class="h-entry" role="document" id="respecDocument">
-  <div class="head" role="contentinfo" id="respecHeader">
+<body id="respecDocument" role="document" class="h-entry">
+  <div id="respecHeader" role="contentinfo" class="head">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Activity Streams 2.0</h1>
-    <h2 id="w3c-candidate-recommendation-31-august-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Candidate Recommendation <time property="dcterms:issued" class="dt-published" datetime="2016-08-31">31 August 2016</time></h2>
+    <h2 id="w3c-candidate-recommendation-06-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Candidate Recommendation <time property="dcterms:issued" class="dt-published" datetime="2016-09-06">06 September 2016</time></h2>
     <dl>
       <dt>This version:</dt>
-      <dd><a class="u-url" href="https://www.w3.org/TR/2016/CR-activitystreams-core-20160831/">https://www.w3.org/TR/2016/CR-activitystreams-core-20160831/</a></dd>
+      <dd><a class="u-url" href="https://www.w3.org/TR/2016/CR-activitystreams-core-20160906/">https://www.w3.org/TR/2016/CR-activitystreams-core-20160906/</a></dd>
       <dt>Latest published version:</dt>
       <dd><a href="https://www.w3.org/TR/activitystreams-core/">https://www.w3.org/TR/activitystreams-core/</a></dd>
       <dt>Latest editor's draft:</dt>
@@ -611,14 +612,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <hr title="Separator for header">
   </div>
 
-  <section id="abstract" class="introductory" property="dc:abstract">
-    <h2 id="h-abstract" resource="#h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
+  <section property="dc:abstract" class="introductory" id="abstract">
+    <h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
     <p>
       This specification details a model for representing potential and completed activities using the JSON format.
     </p>
 
-    <section id="authorsnote" class="informative" typeof="bibo:Chapter" resource="#authorsnote" property="bibo:hasPart">
-      <h3 id="h-authorsnote" resource="#h-authorsnote"><span property="xhv:role" resource="xhv:heading">Author's Note</span></h3>
+    <section property="bibo:hasPart" resource="#authorsnote" typeof="bibo:Chapter" id="authorsnote" class="informative">
+      <h3 resource="#h-authorsnote" id="h-authorsnote"><span property="xhv:role" resource="xhv:heading">Author's Note</span></h3>
       <p><em>This section is non-normative.</em></p>
       <p>
         This draft is heavily influenced by the JSON Activity Streams 1.0 specification originally co-authored by Martin Atkins, Will Norris, Chris Messina, Monica Wilkinson, Rob Dolin and James Snell. The author is very thankful for their significant contributions and gladly stands on their shoulders. Some portions of the original text of Activity Streams 1.0 are used in this document.
@@ -627,7 +628,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </section>
 
   <section id="sotd" class="introductory">
-    <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+    <h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
     <p>
       <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
     </p>
@@ -638,7 +639,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a href="mailto:public-socialweb@w3.org">public-socialweb@w3.org</a> (<a href="mailto:public-socialweb-request@w3.org?subject=subscribe">subscribe</a>,
       <a href="https://lists.w3.org/Archives/Public/public-socialweb/">archives</a>).
 
-      <abbr title="World Wide Web Consortium">W3C</abbr> publishes a Candidate Recommendation to indicate that the document is believed to be stable and to encourage implementation by the developer community. This Candidate Recommendation is expected to advance to Proposed Recommendation no earlier than 30 November 1899. All comments are welcome.
+      <abbr title="World Wide Web Consortium">W3C</abbr> publishes a Candidate Recommendation to indicate that the document is believed to be stable and to encourage implementation by the developer community. This Candidate Recommendation is expected to advance to Proposed Recommendation no earlier than 20 September 2016. All comments are welcome.
     </p>
     <p>
       Please see the Working Group's <a href="https://github.com/w3c/activitystreams/tree/master/implementation-reports">implementation
@@ -651,7 +652,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       This document was produced by a group operating under the
       <a id="sotd_patent" property="w3p:patentRules" href="https://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
               Policy</a>.
-      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="http://www.w3.org/2004/01/pp-impl/72531/status" rel="disclosure">public list of any patent
+      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/72531/status" rel="disclosure">public list of any patent
                 disclosures</a> made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains
       <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
               Claim(s)</a> must disclose the information in accordance with
@@ -663,74 +664,74 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   </section>
   <nav id="toc">
-    <h2 class="introductory" id="table-of-contents" resource="#table-of-contents"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
-    <ol class="toc" role="directory">
-      <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a>
+    <h2 resource="#table-of-contents" id="table-of-contents" class="introductory"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
+    <ol role="directory" class="toc">
+      <li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a>
         <ol class="toc">
-          <li class="tocline"><a href="#activitystreams-1.0" class="tocxref"><span class="secno">1.1 </span>Relationship to JSON Activity Streams 1.0</a></li>
-          <li class="tocline"><a href="#exit-criteria" class="tocxref"><span class="secno">1.2 </span>Exit Criteria</a></li>
-          <li class="tocline"><a href="#atrisk" class="tocxref"><span class="secno">1.3 </span>At Risk features</a></li>
+          <li class="tocline"><a class="tocxref" href="#activitystreams-1.0"><span class="secno">1.1 </span>Relationship to JSON Activity Streams 1.0</a></li>
+          <li class="tocline"><a class="tocxref" href="#exit-criteria"><span class="secno">1.2 </span>Exit Criteria</a></li>
+          <li class="tocline"><a class="tocxref" href="#atrisk"><span class="secno">1.3 </span>At Risk features</a></li>
         </ol>
       </li>
-      <li class="tocline"><a href="#syntaxconventions" class="tocxref"><span class="secno">2. </span>Serialization</a>
+      <li class="tocline"><a class="tocxref" href="#syntaxconventions"><span class="secno">2. </span>Serialization</a>
         <ol class="toc">
-          <li class="tocline"><a href="#jsonld" class="tocxref"><span class="secno">2.1 </span>JSON-LD</a></li>
-          <li class="tocline"><a href="#urls" class="tocxref"><span class="secno">2.2 </span>IRIs and URLs</a></li>
-          <li class="tocline"><a href="#dates" class="tocxref"><span class="secno">2.3 </span>Date and Times</a></li>
+          <li class="tocline"><a class="tocxref" href="#jsonld"><span class="secno">2.1 </span>JSON-LD</a></li>
+          <li class="tocline"><a class="tocxref" href="#urls"><span class="secno">2.2 </span>IRIs and URLs</a></li>
+          <li class="tocline"><a class="tocxref" href="#dates"><span class="secno">2.3 </span>Date and Times</a></li>
         </ol>
       </li>
-      <li class="tocline"><a href="#examples" class="tocxref"><span class="secno">3. </span>Examples</a>
+      <li class="tocline"><a class="tocxref" href="#examples"><span class="secno">3. </span>Examples</a>
         <ol class="toc">
-          <li class="tocline"><a href="#example-1" class="tocxref"><span class="secno">3.1 </span>Minimal Activity</a></li>
-          <li class="tocline"><a href="#example-2" class="tocxref"><span class="secno">3.2 </span>Basic activity with some additional detail</a></li>
-          <li class="tocline"><a href="#example-3" class="tocxref"><span class="secno">3.3 </span>An extended activity</a></li>
+          <li class="tocline"><a class="tocxref" href="#example-1"><span class="secno">3.1 </span>Minimal Activity</a></li>
+          <li class="tocline"><a class="tocxref" href="#example-2"><span class="secno">3.2 </span>Basic activity with some additional detail</a></li>
+          <li class="tocline"><a class="tocxref" href="#example-3"><span class="secno">3.3 </span>An extended activity</a></li>
         </ol>
       </li>
-      <li class="tocline"><a href="#model" class="tocxref"><span class="secno">4. </span>Model</a>
+      <li class="tocline"><a class="tocxref" href="#model"><span class="secno">4. </span>Model</a>
         <ol class="toc">
-          <li class="tocline"><a href="#object" class="tocxref"><span class="secno">4.1 </span><span data-dfn-type="dfn">Object</span></a></li>
-          <li class="tocline"><a href="#link" class="tocxref"><span class="secno">4.2 </span><span data-dfn-type="dfn">Link</span></a></li>
-          <li class="tocline"><a href="#actors" class="tocxref"><span class="secno">4.3 </span><span data-dfn-type="dfn">Actor</span></a></li>
-          <li class="tocline"><a href="#activities" class="tocxref"><span class="secno">4.4 </span><span data-dfn-type="dfn">Activity</span></a></li>
-          <li class="tocline"><a href="#intransitiveactivities" class="tocxref"><span class="secno">4.5 </span><span data-dfn-type="dfn">IntransitiveActivity</span></a></li>
-          <li class="tocline"><a href="#collections" class="tocxref"><span class="secno">4.6 </span><span data-dfn-type="dfn">Collection</span></a>
+          <li class="tocline"><a class="tocxref" href="#object"><span class="secno">4.1 </span><span data-dfn-type="dfn">Object</span></a></li>
+          <li class="tocline"><a class="tocxref" href="#link"><span class="secno">4.2 </span><span data-dfn-type="dfn">Link</span></a></li>
+          <li class="tocline"><a class="tocxref" href="#actors"><span class="secno">4.3 </span><span data-dfn-type="dfn">Actor</span></a></li>
+          <li class="tocline"><a class="tocxref" href="#activities"><span class="secno">4.4 </span><span data-dfn-type="dfn">Activity</span></a></li>
+          <li class="tocline"><a class="tocxref" href="#intransitiveactivities"><span class="secno">4.5 </span><span data-dfn-type="dfn">IntransitiveActivity</span></a></li>
+          <li class="tocline"><a class="tocxref" href="#collections"><span class="secno">4.6 </span><span data-dfn-type="dfn">Collection</span></a>
             <ol class="toc"></ol>
           </li>
-          <li class="tocline"><a href="#naturalLanguageValues" class="tocxref"><span class="secno">4.7 </span>Natural Language Values</a>
-            <ol class="toc"></ol>
-          </li>
-        </ol>
-      </li>
-      <li class="tocline"><a href="#extensibility" class="tocxref"><span class="secno">5. </span>Extensibility</a>
-        <ol class="toc">
-          <li class="tocline"><a href="#compact-uris" class="tocxref"><span class="secno">5.1 </span>Support for Compact URIs</a></li>
-          <li class="tocline"><a href="#extension-round-trip" class="tocxref"><span class="secno">5.2 </span>Re-serialization of Extensions</a></li>
-        </ol>
-      </li>
-      <li class="tocline"><a href="#privacy" class="tocxref"><span class="secno">6. </span>Privacy Considerations</a></li>
-      <li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">7. </span>Security Considerations</a></li>
-      <li class="tocline"><a href="#iana" class="tocxref"><span class="secno">8. </span>IANA Considerations</a>
-        <ol class="toc">
-          <li class="tocline"><a href="#media-type" class="tocxref"><span class="secno">8.1 </span>The <code>application/activity+json</code> Media Type</a></li>
-        </ol>
-      </li>
-      <li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">9. </span>Conformance</a>
-        <ol class="toc">
-          <li class="tocline"><a href="#documents" class="tocxref"><span class="secno">9.1 </span>Documents</a></li>
-          <li class="tocline"><a href="#implementations" class="tocxref"><span class="secno">9.2 </span>Implementations</a>
+          <li class="tocline"><a class="tocxref" href="#naturalLanguageValues"><span class="secno">4.7 </span>Natural Language Values</a>
             <ol class="toc"></ol>
           </li>
         </ol>
       </li>
-      <li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A. </span>Acknowledgements</a></li>
-      <li class="tocline"><a href="#activitystreams-1.0a" class="tocxref"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</a></li>
-      <li class="tocline"><a href="#example-using-multiple-vocabularies" class="tocxref"><span class="secno">C. </span>Example using Multiple Vocabularies</a></li>
-      <li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">D. </span>Changelog</a></li>
-      <li class="tocline"><a href="#tof" class="tocxref"><span class="secno">E. </span>Table of Figures</a></li>
-      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">F. </span>References</a>
+      <li class="tocline"><a class="tocxref" href="#extensibility"><span class="secno">5. </span>Extensibility</a>
         <ol class="toc">
-          <li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">F.1 </span>Normative references</a></li>
-          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">F.2 </span>Informative references</a></li>
+          <li class="tocline"><a class="tocxref" href="#compact-uris"><span class="secno">5.1 </span>Support for Compact URIs</a></li>
+          <li class="tocline"><a class="tocxref" href="#extension-round-trip"><span class="secno">5.2 </span>Re-serialization of Extensions</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a class="tocxref" href="#privacy"><span class="secno">6. </span>Privacy Considerations</a></li>
+      <li class="tocline"><a class="tocxref" href="#security-considerations"><span class="secno">7. </span>Security Considerations</a></li>
+      <li class="tocline"><a class="tocxref" href="#iana"><span class="secno">8. </span>IANA Considerations</a>
+        <ol class="toc">
+          <li class="tocline"><a class="tocxref" href="#media-type"><span class="secno">8.1 </span>The <code>application/activity+json</code> Media Type</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a class="tocxref" href="#conformance"><span class="secno">9. </span>Conformance</a>
+        <ol class="toc">
+          <li class="tocline"><a class="tocxref" href="#documents"><span class="secno">9.1 </span>Documents</a></li>
+          <li class="tocline"><a class="tocxref" href="#implementations"><span class="secno">9.2 </span>Implementations</a>
+            <ol class="toc"></ol>
+          </li>
+        </ol>
+      </li>
+      <li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgements</a></li>
+      <li class="tocline"><a class="tocxref" href="#activitystreams-1.0a"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</a></li>
+      <li class="tocline"><a class="tocxref" href="#example-using-multiple-vocabularies"><span class="secno">C. </span>Example using Multiple Vocabularies</a></li>
+      <li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">D. </span>Changelog</a></li>
+      <li class="tocline"><a class="tocxref" href="#tof"><span class="secno">E. </span>Table of Figures</a></li>
+      <li class="tocline"><a class="tocxref" href="#references"><span class="secno">F. </span>References</a>
+        <ol class="toc">
+          <li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">F.1 </span>Normative references</a></li>
+          <li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">F.2 </span>Informative references</a></li>
         </ol>
       </li>
     </ol>
@@ -738,25 +739,25 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
 
-  <section id="introduction" typeof="bibo:Chapter" resource="#introduction" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#introduction" typeof="bibo:Chapter" id="introduction">
     <!--OddPage-->
-    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction</span></h2>
+    <h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction</span></h2>
     <p>
       In the most basic sense, an "Activity" is a semantic description of an action. It is the goal of this specification to provide a JSON-based syntax that is sufficient to express metadata about activities in a rich, human-friendly but machine-processable and extensible manner. This can include constructing natural-language descriptions or visual representations about the activity, associating actionable information with various types of objects, communicating or recording activity logs, or delegation of potential actions to other applications.
     </p>
 
     <p>
-      The key words "<em class="rfc2119" title="MUST">MUST</em>", "<em class="rfc2119" title="MUST NOT">MUST NOT</em>", "<em class="rfc2119" title="REQUIRED">REQUIRED</em>", "<em class="rfc2119" title="SHALL">SHALL</em>", "<em class="rfc2119" title="SHALL NOT">SHALL NOT</em>", "
-      <em class="rfc2119" title="SHOULD">SHOULD</em>", "<em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em>", "<em class="rfc2119" title="RECOMMENDED">RECOMMENDED</em>", "<em class="rfc2119" title="MAY">MAY</em>", and "<em class="rfc2119" title="OPTIONAL">OPTIONAL</em>" in this document are to be interpreted as described in [<cite><a class="bibref" href="#bib-RFC2119">RFC2119</a></cite>].
+      The key words "<em title="MUST" class="rfc2119">MUST</em>", "<em title="MUST NOT" class="rfc2119">MUST NOT</em>", "<em title="REQUIRED" class="rfc2119">REQUIRED</em>", "<em title="SHALL" class="rfc2119">SHALL</em>", "<em title="SHALL NOT" class="rfc2119">SHALL NOT</em>", "
+      <em title="SHOULD" class="rfc2119">SHOULD</em>", "<em title="SHOULD NOT" class="rfc2119">SHOULD NOT</em>", "<em title="RECOMMENDED" class="rfc2119">RECOMMENDED</em>", "<em title="MAY" class="rfc2119">MAY</em>", and "<em title="OPTIONAL" class="rfc2119">OPTIONAL</em>" in this document are to be interpreted as described in [<cite><a href="#bib-RFC2119" class="bibref">RFC2119</a></cite>].
     </p>
 
-    <section id="activitystreams-1.0" class="informative" typeof="bibo:Chapter" resource="#activitystreams-1.0" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#activitystreams-1.0" typeof="bibo:Chapter" id="activitystreams-1.0" class="informative">
 
-      <h3 id="h-activitystreams-1.0" resource="#h-activitystreams-1.0"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Relationship to JSON Activity Streams 1.0</span></h3>
+      <h3 resource="#h-activitystreams-1.0" id="h-activitystreams-1.0"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Relationship to JSON Activity Streams 1.0</span></h3>
       <p><em>This section is non-normative.</em></p>
 
       <p>
-        The JSON Activity Streams 1.0 [<cite><a class="bibref" href="#bib-AS1">AS1</a></cite>] specification was published in May of 2011 and provided a baseline extensible syntax for the expression of completed activities. This specification builds upon that initial foundation by incorporating lessons learned through extensive implementation, community feedback and related ongoing work from a variety of other communities.
+        The JSON Activity Streams 1.0 [<cite><a href="#bib-AS1" class="bibref">AS1</a></cite>] specification was published in May of 2011 and provided a baseline extensible syntax for the expression of completed activities. This specification builds upon that initial foundation by incorporating lessons learned through extensive implementation, community feedback and related ongoing work from a variety of other communities.
       </p>
 
       <p>
@@ -798,16 +799,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
       <p>
         The terms <code>displayName</code>, <code>verb</code>,
-        <code>title</code> and <code>objectType</code> should be treated as reserved terms that <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> be used within Activity Streams 2.0 documents. When encountered in an Activity Streams 2.0 document, they
-        <em class="rfc2119" title="SHOULD">SHOULD</em> be processed in accordance to the guidelines listed in
-        <a href="#activitystreams-1.0a" class="sec-ref"><span class="secno">B.</span> <span class="sec-title">Deprecated Activity Streams 1.0 Syntax</span></a>
+        <code>title</code> and <code>objectType</code> should be treated as reserved terms that <em title="SHOULD NOT" class="rfc2119">SHOULD NOT</em> be used within Activity Streams 2.0 documents. When encountered in an Activity Streams 2.0 document, they
+        <em title="SHOULD" class="rfc2119">SHOULD</em> be processed in accordance to the guidelines listed in
+        <a class="sec-ref" href="#activitystreams-1.0a"><span class="secno">B.</span> <span class="sec-title">Deprecated Activity Streams 1.0 Syntax</span></a>
       </p>
 
     </section>
 
-    <section id="exit-criteria" class="informative" typeof="bibo:Chapter" resource="#exit-criteria" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#exit-criteria" typeof="bibo:Chapter" id="exit-criteria" class="informative">
 
-      <h3 id="h-exit-criteria" resource="#h-exit-criteria"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>Exit Criteria</span></h3>
+      <h3 resource="#h-exit-criteria" id="h-exit-criteria"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>Exit Criteria</span></h3>
       <p><em>This section is non-normative.</em></p>
 
       <p>
@@ -837,33 +838,33 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     </section>
 
-    <section id="atrisk" typeof="bibo:Chapter" resource="#atrisk" property="bibo:hasPart">
-      <h3 id="h-atrisk" resource="#h-atrisk"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>At Risk features</span></h3>
+    <section property="bibo:hasPart" resource="#atrisk" typeof="bibo:Chapter" id="atrisk">
+      <h3 resource="#h-atrisk" id="h-atrisk"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>At Risk features</span></h3>
       <p>The Working Group has marked the following features as At Risk and may seek to advance the specification with the removal of these features if insufficient implementation experience can be gathered.</p>
       <ul>
-        <li>All properties of the <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type, except the following:
+        <li>All properties of the <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> type, except the following:
           <ul>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code></li>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code></li>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-type">type</a></code></li>
           </ul>
         </li>
-        <li>All properties of the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> type, except the following:
+        <li>All properties of the <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a> type, except the following:
           <ul>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-id">id</a></code></li>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mediatype">mediaType</a></code></li>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code></li>
           </ul>
         </li>
-        <li>All properties of the <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> type, except the following:
+        <li>All properties of the <a data-link-type="dfn" class="internalDFN" href="#activity">Activity</a> type, except the following:
           <ul>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor">actor</a></code></li>
             <li><code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">object</a></code></li>
           </ul>
         </li>
-        <li>The <a href="#actor" class="internalDFN" data-link-type="dfn">Actor</a> type</li>
-        <li>The <a href="#intransitiveactivity" class="internalDFN" data-link-type="dfn">IntransitiveActivity</a> type</li>
-        <li>The <a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a> and <a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a> types</li>
+        <li>The <a data-link-type="dfn" class="internalDFN" href="#actor">Actor</a> type</li>
+        <li>The <a data-link-type="dfn" class="internalDFN" href="#intransitiveactivity">IntransitiveActivity</a> type</li>
+        <li>The <a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollection"><code>OrderedCollection</code></a> and <a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollectionpage"><code>OrderedCollectionPage</code></a> types</li>
         <li>All extended types
           <ul>
             <li>
@@ -879,52 +880,52 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   </section>
 
-  <section id="syntaxconventions" typeof="bibo:Chapter" resource="#syntaxconventions" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#syntaxconventions" typeof="bibo:Chapter" id="syntaxconventions">
 
     <!--OddPage-->
-    <h2 id="h-syntaxconventions" resource="#h-syntaxconventions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Serialization</span></h2>
+    <h2 resource="#h-syntaxconventions" id="h-syntaxconventions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Serialization</span></h2>
 
     <p>
-      This specification describes a JSON-based [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>] serialization syntax for the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
-        Vocabulary</a> that conforms to a subset of [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] syntax constraints but does not require JSON-LD processing. While other serialization forms are possible, such alternatives are not discussed by this document.
+      This specification describes a JSON-based [<cite><a href="#bib-RFC7159" class="bibref">RFC7159</a></cite>] serialization syntax for the <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
+        Vocabulary</a> that conforms to a subset of [<cite><a href="#bib-JSON-LD" class="bibref">JSON-LD</a></cite>] syntax constraints but does not require JSON-LD processing. While other serialization forms are possible, such alternatives are not discussed by this document.
     </p>
 
     <p>
-      When serialized, absent properties are represented by either (a) setting the property value to null, or (b) by omitting the property declaration altogether at the option of the publisher. These representations are semantically equivalent. If a property has an array value, the absence of any items in that array <em class="rfc2119" title="MUST">MUST</em> be represented by omitting the property entirely or by setting the value to null. The appropriate interpretation of an omitted or explicitly null value is that no value has been assigned as opposed to the view that the given value is empty or nil.
+      When serialized, absent properties are represented by either (a) setting the property value to null, or (b) by omitting the property declaration altogether at the option of the publisher. These representations are semantically equivalent. If a property has an array value, the absence of any items in that array <em title="MUST" class="rfc2119">MUST</em> be represented by omitting the property entirely or by setting the value to null. The appropriate interpretation of an omitted or explicitly null value is that no value has been assigned as opposed to the view that the given value is empty or nil.
     </p>
 
     <p>
-      An <dfn data-dfn-type="dfn" id="dfn-activity-streams-document">Activity Streams
-        Document</dfn> is a JSON document whose root value is an Activity Streams <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> of any type, including a
-      <a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a>, and whose MIME media type is "
+      An <dfn id="dfn-activity-streams-document" data-dfn-type="dfn">Activity Streams
+        Document</dfn> is a JSON document whose root value is an Activity Streams <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> of any type, including a
+      <a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a>, and whose MIME media type is "
       <code>application/activity+json</code>".
     </p>
 
     <p>
-      Activity Streams 2.0 documents <em class="rfc2119" title="MUST">MUST</em> be serialized using the UTF-8 character encoding.
+      Activity Streams 2.0 documents <em title="MUST" class="rfc2119">MUST</em> be serialized using the UTF-8 character encoding.
     </p>
 
-    <section id="jsonld" typeof="bibo:Chapter" resource="#jsonld" property="bibo:hasPart">
-      <h3 id="h-jsonld" resource="#h-jsonld"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>JSON-LD</span></h3>
+    <section property="bibo:hasPart" resource="#jsonld" typeof="bibo:Chapter" id="jsonld">
+      <h3 resource="#h-jsonld" id="h-jsonld"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>JSON-LD</span></h3>
 
       <p>
-        The serialized JSON form of an Activity Streams 2.0 document <em class="rfc2119" title="MUST">MUST</em> be consistent with what would be produced by the standard JSON-LD 1.0 Processing Algorithms and API [<cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>] Compaction Algorithm using, at least, the normative JSON-LD @context definition provided <a href="activitystreams2-context.jsonld">here</a>. Implementations <em class="rfc2119" title="MAY">MAY</em> augment the provided @context with additional @context definitions but <em class="rfc2119" title="MUST NOT">MUST NOT</em> override or change the normative context. Implementations <em class="rfc2119" title="MAY">MAY</em> also use additional properties and values not defined in the JSON-LD @context with the understanding that any such properties will likely be unsupported and ignored by consuming implementations that use the standard JSON-LD algorithms. See the
+        The serialized JSON form of an Activity Streams 2.0 document <em title="MUST" class="rfc2119">MUST</em> be consistent with what would be produced by the standard JSON-LD 1.0 Processing Algorithms and API [<cite><a href="#bib-JSON-LD-API" class="bibref">JSON-LD-API</a></cite>] Compaction Algorithm using, at least, the normative JSON-LD @context definition provided <a href="activitystreams2-context.jsonld">here</a>. Implementations <em title="MAY" class="rfc2119">MAY</em> augment the provided @context with additional @context definitions but <em title="MUST NOT" class="rfc2119">MUST NOT</em> override or change the normative context. Implementations <em title="MAY" class="rfc2119">MAY</em> also use additional properties and values not defined in the JSON-LD @context with the understanding that any such properties will likely be unsupported and ignored by consuming implementations that use the standard JSON-LD algorithms. See the
         <a href="#extensibility">Extensibility</a> section for more information on handling extensions within Activity Streams 2.0 documents.
       </p>
 
       <p>
         JSON-LD uses the special <code>@context</code> property to define the
         <a href="http://www.w3.org/TR/json-ld/#the-context">processing
-          context</a>. The value of the <code>@context</code> property is defined by the [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] specification. Implementations producing Activity Streams 2.0 documents <em class="rfc2119" title="SHOULD">SHOULD</em> include a <code>@context</code> property with a value that includes a reference to the normative
+          context</a>. The value of the <code>@context</code> property is defined by the [<cite><a href="#bib-JSON-LD" class="bibref">JSON-LD</a></cite>] specification. Implementations producing Activity Streams 2.0 documents <em title="SHOULD" class="rfc2119">SHOULD</em> include a <code>@context</code> property with a value that includes a reference to the normative
         <a href="activitystreams2-context.jsonld">Activity Streams 2.0 JSON-LD
           @context definition</a> using the URL "
         <code>https://www.w3.org/ns/activitystreams</code>". Implementations
-        <em class="rfc2119" title="MAY">MAY</em> use the alternative URL "
+        <em title="MAY" class="rfc2119">MAY</em> use the alternative URL "
         <code>http://www.w3.org/ns/activitystreams</code>" instead.
       </p>
 
       <div class="note">
-        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span><span style="text-transform: none">: At Risk</span></div>
+        <div id="h-note1" role="heading" aria-level="4" class="note-title marker"><span>Note</span><span style="text-transform: none">: At Risk</span></div>
         <p class="">
           The alternative HTTP-only URL is At Risk. The Working Group believes some implementations may benefit from the HTTP-only URL. However, if insufficient evidence of implementation can be obtained during the Candidate Recommendation period then the Working Group may seek to advance the specification with this alternative omitted. See <a href="https://github.com/w3c/activitystreams/issues/351">issue #351</a> for history and discussion.
         </p>
@@ -934,30 +935,30 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         When a JSON-LD enabled Activity Streams 2.0 implementation encounters a JSON document identified using the "
         <code>application/activity+json</code>" MIME media type, and that document does not contain a <code>@context</code> property whose value includes a reference to the normative
         <a href="activitystreams2-context.jsonld">Activity Streams 2.0 JSON-LD
-          @context definition</a>, the implementation <em class="rfc2119" title="MUST">MUST</em> assume that the normative @context definition still applies.
+          @context definition</a>, the implementation <em title="MUST" class="rfc2119">MUST</em> assume that the normative @context definition still applies.
       </p>
     </section>
 
-    <section id="urls" typeof="bibo:Chapter" resource="#urls" property="bibo:hasPart">
-      <h3 id="h-urls" resource="#h-urls"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.2 </span>IRIs and URLs</span></h3>
+    <section property="bibo:hasPart" resource="#urls" typeof="bibo:Chapter" id="urls">
+      <h3 resource="#h-urls" id="h-urls"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.2 </span>IRIs and URLs</span></h3>
 
       <p>
-        This specification uses IRIs [<cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>]. Every URI [<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>] is also an IRI, so a URI may be used wherever an IRI is named. There are two special considerations: (1) when an IRI that is not also a URI is given for dereferencing, it <em class="rfc2119" title="MUST">MUST</em> be mapped to a URI using the steps in Section 3.1 of [<cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>] and (2) when an IRI is serving as an "id" value, it <em class="rfc2119" title="MUST NOT">MUST NOT</em> be so mapped.
+        This specification uses IRIs [<cite><a href="#bib-RFC3987" class="bibref">RFC3987</a></cite>]. Every URI [<cite><a href="#bib-RFC3986" class="bibref">RFC3986</a></cite>] is also an IRI, so a URI may be used wherever an IRI is named. There are two special considerations: (1) when an IRI that is not also a URI is given for dereferencing, it <em title="MUST" class="rfc2119">MUST</em> be mapped to a URI using the steps in Section 3.1 of [<cite><a href="#bib-RFC3987" class="bibref">RFC3987</a></cite>] and (2) when an IRI is serving as an "id" value, it <em title="MUST NOT" class="rfc2119">MUST NOT</em> be so mapped.
       </p>
 
       <p>
-        Relative IRI (and URL) references <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em> be used within an Activity Streams 2.0 document due to the fact that many JSON parser implementations are not capable of reliably preserving the base context necessary to properly resolve relative references.
+        Relative IRI (and URL) references <em title="SHOULD NOT" class="rfc2119">SHOULD NOT</em> be used within an Activity Streams 2.0 document due to the fact that many JSON parser implementations are not capable of reliably preserving the base context necessary to properly resolve relative references.
       </p>
     </section>
 
-    <section id="dates" typeof="bibo:Chapter" resource="#dates" property="bibo:hasPart">
-      <h3 id="h-dates" resource="#h-dates"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>Date and Times</span></h3>
+    <section property="bibo:hasPart" resource="#dates" typeof="bibo:Chapter" id="dates">
+      <h3 resource="#h-dates" id="h-dates"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>Date and Times</span></h3>
       <p>
-        All properties with date and time values <em class="rfc2119" title="MUST">MUST</em> conform to the "date-time" production in [<cite><a class="bibref" href="#bib-RFC3339">RFC3339</a></cite>] with the one exception that seconds <em class="rfc2119" title="MAY">MAY</em> be omitted. An uppercase "T" character <em class="rfc2119" title="MUST">MUST</em> be used to separate date and time, and an uppercase "Z" character <em class="rfc2119" title="MUST">MUST</em> be used in the absence of a numeric time zone offset.
+        All properties with date and time values <em title="MUST" class="rfc2119">MUST</em> conform to the "date-time" production in [<cite><a href="#bib-RFC3339" class="bibref">RFC3339</a></cite>] with the one exception that seconds <em title="MAY" class="rfc2119">MAY</em> be omitted. An uppercase "T" character <em title="MUST" class="rfc2119">MUST</em> be used to separate date and time, and an uppercase "Z" character <em title="MUST" class="rfc2119">MUST</em> be used in the absence of a numeric time zone offset.
       </p>
       <p>
-        This is specified using the following [<cite><a class="bibref" href="#bib-ABNF">ABNF</a></cite>] syntax description. The "time-hour", "time-minute", "time-second", "time-secfrac", "time-offset" and "full-date" constructs are as defined in [
-        <cite><a class="bibref" href="#bib-RFC3339">RFC3339</a></cite>].
+        This is specified using the following [<cite><a href="#bib-ABNF" class="bibref">ABNF</a></cite>] syntax description. The "time-hour", "time-minute", "time-second", "time-secfrac", "time-offset" and "full-date" constructs are as defined in [
+        <cite><a href="#bib-RFC3339" class="bibref">RFC3339</a></cite>].
       </p>
       <pre class="hljs javascript">as2-partial-time = time-hour <span class="hljs-string">":"</span> time-minute [<span class="hljs-string">":"</span> time-second]
                    [time-secfrac]
@@ -973,9 +974,9 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
   </section>
 
-  <section id="examples" class="informative" typeof="bibo:Chapter" resource="#examples" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#examples" typeof="bibo:Chapter" id="examples" class="informative">
     <!--OddPage-->
-    <h2 id="h-examples" resource="#h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Examples</span></h2>
+    <h2 resource="#h-examples" id="h-examples"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Examples</span></h2>
     <p><em>This section is non-normative.</em></p>
 
     <p>
@@ -986,8 +987,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       Each example is shown using the normative JSON serialization defined by this specification.
     </p>
 
-    <section id="example-1" typeof="bibo:Chapter" resource="#example-1" property="bibo:hasPart">
-      <h3 id="h-example-1" resource="#h-example-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>Minimal Activity</span></h3>
+    <section property="bibo:hasPart" resource="#example-1" typeof="bibo:Chapter" id="example-1">
+      <h3 resource="#h-example-1" id="h-example-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>Minimal Activity</span></h3>
 
       <figure id="fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">
         <figcaption>Fig. <span class="figno">1</span> <span class="fig-title">
@@ -1007,8 +1008,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
     </section>
 
-    <section id="example-2" typeof="bibo:Chapter" resource="#example-2" property="bibo:hasPart">
-      <h3 id="h-example-2" resource="#h-example-2"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>Basic activity with some additional detail</span></h3>
+    <section property="bibo:hasPart" resource="#example-2" typeof="bibo:Chapter" id="example-2">
+      <h3 resource="#h-example-2" id="h-example-2"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>Basic activity with some additional detail</span></h3>
 
       <figure id="fig-expresses-the-statement-martin-smith-added-an-article-to-the-blog-martin-s-blog-at-3-04-pm-utc-on-february-10-2015.-some-additional-details-about-the-article-actor-and-target-blog-are-given-using-properties-defined-by-the-activity-streams-2.0-vocabulary.x">
         <figcaption>Fig. <span class="figno">2</span> <span class="fig-title">
@@ -1054,9 +1055,9 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
     </section>
 
-    <section id="example-3" typeof="bibo:Chapter" resource="#example-3" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#example-3" typeof="bibo:Chapter" id="example-3">
 
-      <h3 id="h-example-3" resource="#h-example-3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>An extended activity</span></h3>
+      <h3 resource="#h-example-3" id="h-example-3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>An extended activity</span></h3>
 
       <figure id="fig-a-more-extensive-single-entry-activity-stream-follows.x">
         <figcaption>Fig. <span class="figno">3</span> <span class="fig-title">
@@ -1135,9 +1136,9 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
     </section>
   </section>
 
-  <section id="model" typeof="bibo:Chapter" resource="#model" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#model" typeof="bibo:Chapter" id="model">
     <!--OddPage-->
-    <h2 id="h-model" resource="#h-model"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Model</span></h2>
+    <h2 resource="#h-model" id="h-model"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Model</span></h2>
 
     <p>
       The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a> normatively defines the core object types and properties for Activity Streams 2.0.
@@ -1147,31 +1148,31 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       The object types defined by the vocabulary are segmented into a set of seven core types and an extended set of Activity and Object types common to many social Web applications. The core classes include:
     </p>
     <ul>
-      <li><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a>,</li>
-      <li><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>,</li>
-      <li><a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a>,</li>
-      <li><a href="#intransitiveactivity" class="internalDFN" data-link-type="dfn">IntransitiveActivity</a>,</li>
-      <li><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a>,</li>
-      <li><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a>,</li>
-      <li><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>, and</li>
-      <li><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a>.</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#activity">Activity</a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#intransitiveactivity">IntransitiveActivity</a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollection"><code>OrderedCollection</code></a>,</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>, and</li>
+      <li><a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollectionpage"><code>OrderedCollectionPage</code></a>.</li>
     </ul>
     <p></p>
 
     <p>
       Every JSON object in an Activity Streams 2.0 document is either an
-      <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> or a <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code>. All other types defined in the Activity Vocabulary, as well as all extension types, are derived from these two base types.
+      <code><a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a></code> or a <code><a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a></code>. All other types defined in the Activity Vocabulary, as well as all extension types, are derived from these two base types.
     </p>
 
     <p>
       A JSON object in the Activity Streams 2.0 document is a
-      <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code> if either: (a) the object contains a
-      <code>type</code> property whose value includes "<code>Link</code>" or (b) any of the types included in the value of the <code>type</code> property are defined as extensions of <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> (see
-      <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a> for instance); otherwise the JSON object is considered an instance or extension of <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code>.
+      <code><a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a></code> if either: (a) the object contains a
+      <code>type</code> property whose value includes "<code>Link</code>" or (b) any of the types included in the value of the <code>type</code> property are defined as extensions of <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a> (see
+      <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-mention">Mention</a> for instance); otherwise the JSON object is considered an instance or extension of <code><a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a></code>.
     </p>
 
-    <section id="object" typeof="bibo:Chapter" resource="#object" property="bibo:hasPart">
-      <h3 id="h-object" resource="#h-object"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1 </span><dfn id="asobject" data-dfn-type="dfn">Object</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#object" typeof="bibo:Chapter" id="object">
+      <h3 resource="#h-object" id="h-object"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1 </span><dfn data-dfn-type="dfn" id="asobject">Object</dfn></span></h3>
 
       <p>
         The <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object">Object</a></code> is the primary base type for the Activity Streams vocabulary.
@@ -1215,7 +1216,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         While all properties are optional (including the <code>id</code> and
-        <code>type</code>), all <code>Object</code> instances <em class="rfc2119" title="SHOULD">SHOULD</em> at least contain a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> (or equivalent
+        <code>type</code>), all <code>Object</code> instances <em title="SHOULD" class="rfc2119">SHOULD</em> at least contain a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> (or equivalent
         <code><a href="#naturalLanguageValues">nameMap</a></code>).
       </p>
 
@@ -1251,8 +1252,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         Furthermore, while implementations are free to introduce new types of Objects beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Object types.
       </p>
       <p>
-        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. The Good Relations Vocabulary) define their own classes for describing locations. An implementation that wishes, for example, to use a
-        <code><a href="http://www.heppnetz.de/ontologies/goodrelations/v1.html#Location">http://purl.org/goodrelations/v1#Location</a></code> as an object type <em class="rfc2119" title="MUST">MUST</em> also identify the object as being a
+        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em title="MUST" class="rfc2119">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. The Good Relations Vocabulary) define their own classes for describing locations. An implementation that wishes, for example, to use a
+        <code><a href="http://www.heppnetz.de/ontologies/goodrelations/v1.html#Location">http://purl.org/goodrelations/v1#Location</a></code> as an object type <em title="MUST" class="rfc2119">MUST</em> also identify the object as being a
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-place">Place</a></code> as illustrated in the following:
       </p>
 
@@ -1278,16 +1279,16 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         Certain properties defined by some External Vocabularies can overlap or duplicate those defined by the Activity Vocabulary. Where such overlap exists, for the sake of consistent interoperability, implementations
-        <em class="rfc2119" title="MUST">MUST</em> favor the use of properties defined by the Activity Vocabulary.
+        <em title="MUST" class="rfc2119">MUST</em> favor the use of properties defined by the Activity Vocabulary.
       </p>
 
     </section>
 
-    <section id="link" typeof="bibo:Chapter" resource="#link" property="bibo:hasPart">
-      <h3 id="h-link" resource="#h-link"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.2 </span><dfn data-dfn-type="dfn" id="dfn-link">Link</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#link" typeof="bibo:Chapter" id="link">
+      <h3 resource="#h-link" id="h-link"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.2 </span><dfn id="dfn-link" data-dfn-type="dfn">Link</dfn></span></h3>
 
       <p>
-        A <code>Link</code> describes a qualified, indirect reference to another resource that is closely related to the conceptual model of Links as established in [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>]. The properties of the Link object are not the properties of the referenced resource, but are provided as hints for rendering agents to understand how to make use of the resource. For example, <code>height</code> and <code>width</code> might represent the desired rendered size of a referenced image, rather than the actual pixel dimensions of the referenced image.
+        A <code>Link</code> describes a qualified, indirect reference to another resource that is closely related to the conceptual model of Links as established in [<cite><a href="#bib-RFC5988" class="bibref">RFC5988</a></cite>]. The properties of the Link object are not the properties of the referenced resource, but are provided as hints for rendering agents to understand how to make use of the resource. For example, <code>height</code> and <code>width</code> might represent the desired rendered size of a referenced image, rather than the actual pixel dimensions of the referenced image.
       </p>
 
       <p>
@@ -1303,7 +1304,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
 
       <p>
-        For example, all <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> can contain an
+        For example, all <a data-link-type="dfn" class="internalDFN" href="#asobject" data-lt="Object">Objects</a> can contain an
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-image-term">image</a></code> property whose value describes a graphical representation of the containing object. This property will typically be used to provide the URL to an image (e.g. JPEG, GIF or PNG) resource that can be displayed to the user. Any given object might have multiple such visual representations -- multiple screenshots, for instance, or the same image at different resolutions. In Activity Streams 2.0, there are essentially three ways of describing such references.
       </p>
 
@@ -1326,7 +1327,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <figure id="fig-alternatively-if-additional-metadata-is-required-such-as-the-mime-content-type-of-the-referenced-resource-a-link-can-be-used">
         <figcaption>Fig. <span class="figno">7</span> <span class="fig-title">
         Alternatively, if additional metadata is required (such as the MIME
-        content type of the referenced resource) a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> can be used:
+        content type of the referenced resource) a <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a> can be used:
       </span></figcaption>
         <div id="ex13-jsonld" style="display: block;">
           <div class="example">
@@ -1352,7 +1353,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       <figure id="fig-if-more-than-one-value-is-to-be-expressed-a-json-array-with-a-mix-of-strings-and-links-can-be-used">
         <figcaption>Fig. <span class="figno">8</span> <span class="fig-title">
         If more than one value is to be expressed, A JSON Array with a
-        mix of strings and <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>s can be used:
+        mix of strings and <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a>s can be used:
       </span></figcaption>
         <div id="ex14-jsonld" style="display: block;">
           <div class="example">
@@ -1378,11 +1379,11 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
 
       <p>
-        RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, A single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
+        RFC 5988 defines that all Links have a "link relation" that describes the contextual purpose of the link. Within a <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a>, the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-rel">rel</a></code> property provides the link relation value. If no <code>rel</code> property is specified, the link relation is considered to be unspecified. Any given Link can have multiple link relation values. In the JSON serialization, A single link relation is expressed as a single JSON string. Multiple link relations are expressed as an array of JSON strings.
       </p>
 
       <p>
-        The scope of the link relation is the object in which the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> is an immediate child.
+        The scope of the link relation is the object in which the <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a> is an immediate child.
       </p>
 
       <p>
@@ -1412,21 +1413,21 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <p>
-        It ought to be noted that the [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] specification provides its own alternative definition of a "link relation" that differs slightly from the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] definition. In the HTML5 definition, any string that does not contain the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation. To promote interoperability, Activity Streams 2.0 implementations <em class="rfc2119" title="MUST">MUST</em> only use link relations that are syntactically valid in terms of both the [<cite><a class="bibref" href="#bib-RFC5988">RFC5988</a></cite>] and [<cite><a class="bibref" href="#bib-HTML5">HTML5</a></cite>] definitions. Implementations <em class="rfc2119" title="MAY">MAY</em> use link relation values that are not registered.
+        It ought to be noted that the [<cite><a href="#bib-HTML5" class="bibref">HTML5</a></cite>] specification provides its own alternative definition of a "link relation" that differs slightly from the [<cite><a href="#bib-RFC5988" class="bibref">RFC5988</a></cite>] definition. In the HTML5 definition, any string that does not contain the "space" U+0020, "tab" (U+0009), "LF" (U+000A), "FF" (U+000C), "CR" (U+000D) or "," (U+002C) characters can be used as a valid link relation. To promote interoperability, Activity Streams 2.0 implementations <em title="MUST" class="rfc2119">MUST</em> only use link relations that are syntactically valid in terms of both the [<cite><a href="#bib-RFC5988" class="bibref">RFC5988</a></cite>] and [<cite><a href="#bib-HTML5" class="bibref">HTML5</a></cite>] definitions. Implementations <em title="MAY" class="rfc2119">MAY</em> use link relation values that are not registered.
       </p>
 
       <p>
-        Note that the <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a> and <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> classes are disjoint from one another. That is, any given <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> cannot also be a
-        <a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a>.
+        Note that the <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a> and <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> classes are disjoint from one another. That is, any given <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> cannot also be a
+        <a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a>.
       </p>
 
     </section>
 
-    <section id="actors" typeof="bibo:Chapter" resource="#actors" property="bibo:hasPart">
-      <h3 id="h-actors" resource="#h-actors"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3 </span><dfn id="actor" data-dfn-type="dfn">Actor</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#actors" typeof="bibo:Chapter" id="actors">
+      <h3 resource="#h-actors" id="h-actors"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3 </span><dfn data-dfn-type="dfn" id="actor">Actor</dfn></span></h3>
 
       <p>
-        Actor objects are specializations of the base <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type that represent entities capable of carrying out an Activity. The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
+        Actor objects are specializations of the base <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> type that represent entities capable of carrying out an Activity. The <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity
         Vocabulary</a> provides the normative definition of five specific types of Actors:
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-application">Application</a>
         </code> |
@@ -1438,8 +1439,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         This specification intentionally defines Actors in only the most generalized way, stopping short of defining semantically specific properties for each. All Actor objects are specializations of
-        <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> and inherit all of the core properties common to all Objects. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary. VCard [
-        <cite><a class="bibref" href="#bib-vcard-rdf">vcard-rdf</a></cite>] <em class="rfc2119" title="SHOULD">SHOULD</em> be used to provide additional metadata for
+        <code><a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a></code> and inherit all of the core properties common to all Objects. External vocabularies can be used to express additional detail not covered by the Activity Vocabulary. VCard [
+        <cite><a href="#bib-vcard-rdf" class="bibref">vcard-rdf</a></cite>] <em title="SHOULD" class="rfc2119">SHOULD</em> be used to provide additional metadata for
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a>,
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-group">Group</a>, and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-organization">Organization</a> instances.
       </p>
@@ -1474,20 +1475,20 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         While implementations are free to introduce new types of Actors beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Actor types.
       </p>
       <p>
-        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. VCard) define their own classes for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor <em class="rfc2119" title="MUST">MUST</em> also identify that Actor as a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
+        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em title="MUST" class="rfc2119">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. VCard) define their own classes for describing people. An implementation that wishes, for example, to use a <code>vcard:Individual</code> as an Actor <em title="MUST" class="rfc2119">MUST</em> also identify that Actor as a <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-person">Person</a></code> as illustrated in the previous example.
       </p>
 
     </section>
 
-    <section id="activities" typeof="bibo:Chapter" resource="#activities" property="bibo:hasPart">
-      <h3 id="h-activities" resource="#h-activities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.4 </span><dfn id="activity" data-dfn-type="dfn">Activity</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#activities" typeof="bibo:Chapter" id="activities">
+      <h3 resource="#h-activities" id="h-activities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.4 </span><dfn data-dfn-type="dfn" id="activity">Activity</dfn></span></h3>
 
       <p>
-        Activity objects are specializations of the base <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> type that provide information about actions that have either already occurred, are in the process of occurring, or may occur in the future.
+        Activity objects are specializations of the base <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> type that provide information about actions that have either already occurred, are in the process of occurring, or may occur in the future.
       </p>
 
       <p>
-        In addition to common properties supported by all <a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a> instances, <code>Activity</code> objects support the following additional properties defined by the
+        In addition to common properties supported by all <a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a> instances, <code>Activity</code> objects support the following additional properties defined by the
         <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a>:
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-actor">actor</a></code> |
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> |
@@ -1526,7 +1527,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         While implementations are free to introduce new types of Activites beyond those defined by the Activity Vocabulary, interoperability issues can arise when applications rely too much on extension types that are not recognized by other implementations. Care should be taken to not unduly overlap with or duplicate the existing Activity types.
       </p>
       <p>
-        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em class="rfc2119" title="MUST">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. Schema.org) define their own classes for describing actions. An implementation that wishes, for example, to use <code><a href="http://schema.org/LikeAction">http://schema.org/LikeAction</a></code> as an Activity <em class="rfc2119" title="MUST">MUST</em> also identify that Object as being a
+        When an implementation uses an extension type that overlaps with a core vocabulary type, the implementation <em title="MUST" class="rfc2119">MUST</em> also specify the core vocabulary type. For instance, some vocabularies (e.g. Schema.org) define their own classes for describing actions. An implementation that wishes, for example, to use <code><a href="http://schema.org/LikeAction">http://schema.org/LikeAction</a></code> as an Activity <em title="MUST" class="rfc2119">MUST</em> also identify that Object as being a
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-like">Like</a></code> as illustrated in the following:
       </p>
 
@@ -1554,26 +1555,26 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
     </section>
 
-    <section id="intransitiveactivities" typeof="bibo:Chapter" resource="#intransitiveactivities" property="bibo:hasPart">
-      <h3 id="h-intransitiveactivities" resource="#h-intransitiveactivities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span><dfn id="intransitiveactivity" data-dfn-type="dfn">IntransitiveActivity</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#intransitiveactivities" typeof="bibo:Chapter" id="intransitiveactivities">
+      <h3 resource="#h-intransitiveactivities" id="h-intransitiveactivities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span><dfn data-dfn-type="dfn" id="intransitiveactivity">IntransitiveActivity</dfn></span></h3>
 
       <p>
-        IntransitiveActivity objects are specializations of the <a href="#activity" class="internalDFN" data-link-type="dfn">Activity</a> type that represent intransitive actions. IntransitiveActivity objects do not have an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> property.
+        IntransitiveActivity objects are specializations of the <a data-link-type="dfn" class="internalDFN" href="#activity">Activity</a> type that represent intransitive actions. IntransitiveActivity objects do not have an <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-object-term">object</a></code> property.
       </p>
     </section>
 
-    <section id="collections" typeof="bibo:Chapter" resource="#collections" property="bibo:hasPart">
-      <h3 id="h-collections" resource="#h-collections"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6 </span><dfn id="collection" data-dfn-type="dfn">Collection</dfn></span></h3>
+    <section property="bibo:hasPart" resource="#collections" typeof="bibo:Chapter" id="collections">
+      <h3 resource="#h-collections" id="h-collections"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6 </span><dfn data-dfn-type="dfn" id="collection">Collection</dfn></span></h3>
 
       <p>
-        <code>Collection</code> objects are a specialization of the base <code><a href="#asobject" class="internalDFN" data-link-type="dfn">Object</a></code> that serve as a container for other
-        <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> or <a data-lt="Link" href="#dfn-link" class="internalDFN" data-link-type="dfn">Links</a>.
+        <code>Collection</code> objects are a specialization of the base <code><a data-link-type="dfn" class="internalDFN" href="#asobject">Object</a></code> that serve as a container for other
+        <a data-link-type="dfn" class="internalDFN" href="#asobject" data-lt="Object">Objects</a> or <a data-link-type="dfn" class="internalDFN" href="#dfn-link" data-lt="Link">Links</a>.
       </p>
 
       <p>
         In addition to the base properties inherited by all
-        <code><a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a></code>, all
-        <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> types contain the additional properties:
+        <code><a data-link-type="dfn" class="internalDFN" href="#asobject" data-lt="Object">Objects</a></code>, all
+        <code><a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a></code> types contain the additional properties:
         <code>
           <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-items">items</a> |
           <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-totalitems">totalItems</a> |
@@ -1584,7 +1585,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </p>
 
       <p>
-        The items within a <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> can be ordered or unordered. The <code><dfn data-dfn-type="dfn" id="dfn-orderedcollection">OrderedCollection</dfn></code> type can be used to identify a Collection whose items are always ordered. In the JSON serialization, the unordered items of a Collection are represented using the <code>items</code> property while ordered items are represented using the <code>orderedItems</code> property.
+        The items within a <code><a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a></code> can be ordered or unordered. The <code><dfn id="dfn-orderedcollection" data-dfn-type="dfn">OrderedCollection</dfn></code> type can be used to identify a Collection whose items are always ordered. In the JSON serialization, the unordered items of a Collection are represented using the <code>items</code> property while ordered items are represented using the <code>orderedItems</code> property.
       </p>
 
       <figure id="fig-the-following-is-a-simple-unordered-collection">
@@ -1641,18 +1642,18 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         </div>
       </figure>
 
-      <section id="paging" typeof="bibo:Chapter" resource="#paging" property="bibo:hasPart">
-        <h4 id="h-paging" resource="#h-paging"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6.1 </span>Collection Paging</span></h4>
+      <section property="bibo:hasPart" resource="#paging" typeof="bibo:Chapter" id="paging">
+        <h4 resource="#h-paging" id="h-paging"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6.1 </span>Collection Paging</span></h4>
 
         <p>
           A Collection can contain a large number of items. Often, it becomes impractical for an implementation to serialize every item contained by a Collection using the <code>items</code> (or
-          <code>orderedItems</code>) property alone. In such cases, the items within a Collection can be divided into distinct subsets or "pages". A page is identified using the <code><dfn data-dfn-type="dfn" id="dfn-collectionpage">CollectionPage</dfn></code> type.
+          <code>orderedItems</code>) property alone. In such cases, the items within a Collection can be divided into distinct subsets or "pages". A page is identified using the <code><dfn id="dfn-collectionpage" data-dfn-type="dfn">CollectionPage</dfn></code> type.
         </p>
 
         <p>
-          The <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>
+          The <code><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>
           </code> type extends from the base
-          <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> type and inherits all of it's properties. The following additional properties can also be specified:
+          <code><a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a></code> type and inherits all of it's properties. The following additional properties can also be specified:
           <code>
             <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-partof">partOf</a> |
             <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-first">first</a> |
@@ -1665,26 +1666,26 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
         <p>
           The <code>partOf</code> property identifies the
-          <code><a href="#collection" class="internalDFN" data-link-type="dfn">Collection</a></code> to which the items contained by the
+          <code><a data-link-type="dfn" class="internalDFN" href="#collection">Collection</a></code> to which the items contained by the
           <code>CollectionPage</code> belong.
         </p>
 
         <p>
           The <code>first</code>, <code>next</code>, <code>prev</code>,
-          <code>last</code>, and <code>current</code> properties are used to reference other <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>
+          <code>last</code>, and <code>current</code> properties are used to reference other <code><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>
           </code> instances that contain additional subsets of items from the parent collection.
         </p>
 
         <p>
           As with <code>Collection</code> objects, the items within a
-          <code>CollectionPage</code> might be ordered or unordered. The <code><dfn data-dfn-type="dfn" id="dfn-orderedcollectionpage">OrderedCollectionPage</dfn></code> type can be used to identify a page whose items are strictly ordered.
+          <code>CollectionPage</code> might be ordered or unordered. The <code><dfn id="dfn-orderedcollectionpage" data-dfn-type="dfn">OrderedCollectionPage</dfn></code> type can be used to identify a page whose items are strictly ordered.
         </p>
 
         <p>
-          The <code><a href="#dfn-orderedcollectionpage" class="internalDFN" data-link-type="dfn"><code>OrderedCollectionPage</code></a>
-          </code> type extends from both <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>
+          The <code><a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollectionpage"><code>OrderedCollectionPage</code></a>
+          </code> type extends from both <code><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>
           </code> and
-          <code><a href="#dfn-orderedcollection" class="internalDFN" data-link-type="dfn"><code>OrderedCollection</code></a>
+          <code><a data-link-type="dfn" class="internalDFN" href="#dfn-orderedcollection"><code>OrderedCollection</code></a>
           </code>. In addition to the properties inherited from each of those, the <code>OrderedCollectionPage</code> may contain an additional
           <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-startindex">startIndex</a></code> property whose value indicates the relative index position of the first item contained by the page within the
           <code>OrderedCollection</code> to which the page belongs.
@@ -1717,9 +1718,9 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
         <p>
           The values for the <code>first</code>, <code>last</code>,
-          <code>next</code>, <code>prev</code>, and <code>current</code> properties can be either a single <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>
+          <code>next</code>, <code>prev</code>, and <code>current</code> properties can be either a single <code><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>
           </code>
-          or a <code><a href="#dfn-link" class="internalDFN" data-link-type="dfn">Link</a></code> referencing a separate resource containing a <code><a href="#dfn-collectionpage" class="internalDFN" data-link-type="dfn"><code>CollectionPage</code></a>
+          or a <code><a data-link-type="dfn" class="internalDFN" href="#dfn-link">Link</a></code> referencing a separate resource containing a <code><a data-link-type="dfn" class="internalDFN" href="#dfn-collectionpage"><code>CollectionPage</code></a>
           </code>.
         </p>
 
@@ -1760,13 +1761,13 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
     </section>
 
-    <section id="naturalLanguageValues" typeof="bibo:Chapter" resource="#naturalLanguageValues" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#naturalLanguageValues" typeof="bibo:Chapter" id="naturalLanguageValues">
 
-      <h3 id="h-naturallanguagevalues" resource="#h-naturallanguagevalues"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7 </span>Natural Language Values</span></h3>
+      <h3 resource="#h-naturallanguagevalues" id="h-naturallanguagevalues"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7 </span>Natural Language Values</span></h3>
 
       <p>
         Several properties defined by the
-        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> are defined as having natural language values. These are human-readable strings using one or more languages. Within the JSON serialization, they are expressed as either (1) a single JSON string or (2) a JSON object mapping well-formed [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tags to localized, equivalent translations of the same string value. In the serialized JSON, these two forms are differentiated using a simple property naming convention, for instance: "<code>name</code>" identifies the JSON string form for the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> property while "<code>nameMap</code>" represents the object form.
+        <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Vocabulary</a> are defined as having natural language values. These are human-readable strings using one or more languages. Within the JSON serialization, they are expressed as either (1) a single JSON string or (2) a JSON object mapping well-formed [<cite><a href="#bib-BCP47" class="bibref">BCP47</a></cite>] Language-Tags to localized, equivalent translations of the same string value. In the serialized JSON, these two forms are differentiated using a simple property naming convention, for instance: "<code>name</code>" identifies the JSON string form for the <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-name">name</a></code> property while "<code>nameMap</code>" represents the object form.
       </p>
 
       <figure id="fig-a-single-name-string-value-without-language-information">
@@ -1798,7 +1799,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <p>
-        Every key in the object form <em class="rfc2119" title="MUST">MUST</em> be a well-formed [<cite><a class="bibref" href="#bib-BCP47">BCP47</a></cite>] Language-Tag. The associated values <em class="rfc2119" title="MUST">MUST</em> be strings.
+        Every key in the object form <em title="MUST" class="rfc2119">MUST</em> be a well-formed [<cite><a href="#bib-BCP47" class="bibref">BCP47</a></cite>] Language-Tag. The associated values <em title="MUST" class="rfc2119">MUST</em> be strings.
       </p>
 
       <p>
@@ -1817,7 +1818,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <figure id="fig-using-the-und-language-tag">
         <figcaption>Fig. <span class="figno">20</span> <span class="fig-title">Using the <code>"und"</code> language tag:</span></figcaption>
-        <div id="ex11b-jsonld" style="display: block;">
+        <div id="ex18-jsonld" style="display: block;">
           <div class="example">
             <div class="example-title marker"><span>Example 18</span></div><pre class="highlight json hljs xquery">{
         <span class="hljs-string">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
@@ -1830,18 +1831,18 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <div class="note">
-        <div class="note-title marker" aria-level="4" role="heading" id="h-note2"><span>Note</span><span style="text-transform: none">: Recommending Map properties</span></div>
+        <div id="h-note2" role="heading" aria-level="4" class="note-title marker"><span>Note</span><span style="text-transform: none">: Recommending Map properties</span></div>
         <p class="">
           In order to support implementations that do not recognize the
           <code>@language</code> property, the Social Working Group may recommend in a future version of this document that publishers use the "Map" versions of all natural-language values, even if only a single value is provided. See <a href="https://github.com/w3c/activitystreams/issues/341">issue #341</a> for background and discussion.
         </p>
       </div>
 
-      <section id="defaultlangcontext" typeof="bibo:Chapter" resource="#defaultlangcontext" property="bibo:hasPart">
-        <h4 id="h-defaultlangcontext" resource="#h-defaultlangcontext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.1 </span>Default Language Context</span></h4>
+      <section property="bibo:hasPart" resource="#defaultlangcontext" typeof="bibo:Chapter" id="defaultlangcontext">
+        <h4 resource="#h-defaultlangcontext" id="h-defaultlangcontext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.1 </span>Default Language Context</span></h4>
 
         <p>
-          When using [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] mechanisms to produce or consume Activity Streams 2.0 documents, the <code>@language</code> property <em class="rfc2119" title="MAY">MAY</em> be used within a <code>@context</code> to identify the default language. This mechanism may not be understood by implementations that do not choose to process Activity Streams 2.0 documents using JSON-LD.
+          When using [<cite><a href="#bib-JSON-LD" class="bibref">JSON-LD</a></cite>] mechanisms to produce or consume Activity Streams 2.0 documents, the <code>@language</code> property <em title="MAY" class="rfc2119">MAY</em> be used within a <code>@context</code> to identify the default language. This mechanism may not be understood by implementations that do not choose to process Activity Streams 2.0 documents using JSON-LD.
         </p>
 
         <figure id="fig-specifying-the-default-language-within-the-json-ld-context">
@@ -1849,7 +1850,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
             Specifying the default <code>"@language"</code> within the JSON-LD
             <code>@context</code>:
           </span></figcaption>
-          <div id="ex11b-jsonld" style="display: block;">
+          <div id="ex18b-jsonld" style="display: block;">
             <div class="example">
               <div class="example-title marker"><span>Example 19</span></div><pre class="highlight json hljs xquery">{
   <span class="hljs-string">"@context"</span>: [
@@ -1864,28 +1865,28 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
         </figure>
 
         <div class="note">
-          <div class="note-title marker" aria-level="5" role="heading" id="h-note3"><span>Note</span><span style="text-transform: none">: At Risk</span></div>
+          <div id="h-note3" role="heading" aria-level="5" class="note-title marker"><span>Note</span><span style="text-transform: none">: At Risk</span></div>
           <p class="">
             The option to leave out the <code>@language</code> property is At Risk. The Working Group believes that providing a default language environment is important for proper internationalization. the Social Working Group may recommend in a future version of this document that publishers
-            <em class="rfc2119" title="SHOULD">SHOULD</em> use the <code>@language</code> property for all documents. See <a href="https://github.com/w3c/activitystreams/issues/354">issue #354</a> for background and discussion.
+            <em title="SHOULD" class="rfc2119">SHOULD</em> use the <code>@language</code> property for all documents. See <a href="https://github.com/w3c/activitystreams/issues/354">issue #354</a> for background and discussion.
           </p>
         </div>
 
       </section>
 
-      <section id="biditext" typeof="bibo:Chapter" resource="#biditext" property="bibo:hasPart">
-        <h4 id="h-biditext" resource="#h-biditext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.2 </span>Bidirectional Text</span></h4>
+      <section property="bibo:hasPart" resource="#biditext" typeof="bibo:Chapter" id="biditext">
+        <h4 resource="#h-biditext" id="h-biditext"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7.2 </span>Bidirectional Text</span></h4>
 
         <p>
-          Natural language values within an Activity Streams 2.0 document <em class="rfc2119" title="MAY">MAY</em> contain bidirectional text. The default base direction of an Activity Streams 2.0 document is Left-to-Right. The base direction of individual natural language values <em class="rfc2119" title="MAY">MAY</em> be modified as described below.
+          Natural language values within an Activity Streams 2.0 document <em title="MAY" class="rfc2119">MAY</em> contain bidirectional text. The default base direction of an Activity Streams 2.0 document is Left-to-Right. The base direction of individual natural language values <em title="MAY" class="rfc2119">MAY</em> be modified as described below.
         </p>
 
         <p>
-          When specifying bidirectional text for a natural language value, and the base direction of the text cannot be correctly identified by the first strong directional character of that text, publishers <em class="rfc2119" title="SHOULD">SHOULD</em> explicitly identify the default direction either by prefixing the value with an apropriate Unicode bidirectional control character, or by using HTML directional markup where permitted.
+          When specifying bidirectional text for a natural language value, and the base direction of the text cannot be correctly identified by the first strong directional character of that text, publishers <em title="SHOULD" class="rfc2119">SHOULD</em> explicitly identify the default direction either by prefixing the value with an apropriate Unicode bidirectional control character, or by using HTML directional markup where permitted.
         </p>
 
         <p>
-          Consumers of Activity Streams 2.0 documents that contain bidirectional text <em class="rfc2119" title="SHOULD">SHOULD</em> identify the base direction of any given natural language value by either scanning the text for the first strong directional character not contained within a markup element; or by utilizing directional markup where provided. Once the base direction has been identified, consumers <em class="rfc2119" title="MUST">MUST</em> determine the appropriate rendering and display of natural language values, according to the Unicode Bidirectional Algorithm [<cite><a class="bibref" href="#bib-BIDI">BIDI</a></cite>]. This may necessitate wrapping additional control characters or markup around the string prior to display, in order to apply the base direction.
+          Consumers of Activity Streams 2.0 documents that contain bidirectional text <em title="SHOULD" class="rfc2119">SHOULD</em> identify the base direction of any given natural language value by either scanning the text for the first strong directional character not contained within a markup element; or by utilizing directional markup where provided. Once the base direction has been identified, consumers <em title="MUST" class="rfc2119">MUST</em> determine the appropriate rendering and display of natural language values, according to the Unicode Bidirectional Algorithm [<cite><a href="#bib-BIDI" class="bibref">BIDI</a></cite>]. This may necessitate wrapping additional control characters or markup around the string prior to display, in order to apply the base direction.
         </p>
 
         <table>
@@ -1955,23 +1956,23 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
   </section>
 
-  <section id="extensibility" typeof="bibo:Chapter" resource="#extensibility" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#extensibility" typeof="bibo:Chapter" id="extensibility">
 
     <!--OddPage-->
-    <h2 id="h-extensibility" resource="#h-extensibility"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Extensibility</span></h2>
+    <h2 resource="#h-extensibility" id="h-extensibility"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Extensibility</span></h2>
 
     <p>
       In Activity Streams 2.0, an "extension" is any property, activity, actor or object type not defined by the
-      <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions <em class="rfc2119" title="MUST NOT">MUST NOT</em> stop processing or signal an error and <em class="rfc2119" title="MUST">MUST</em> continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
+      <a href="https://www.w3.org/TR/activitystreams-vocabulary/">Activity Vocabulary</a>. Consuming implementations that encounter unfamiliar extensions <em title="MUST NOT" class="rfc2119">MUST NOT</em> stop processing or signal an error and <em title="MUST" class="rfc2119">MUST</em> continue processing the items as if those properties were not present. Note that support for extensions can vary across implementations and no normative processing model for extensions is defined. Accordingly, implementations that rely too heavily on the use of extensions may experience reduced interoperability with other implementations.
     </p>
 
     <p>
-      For extensions, [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] is used as the primary mechanism for defining and disambiguating extensions. Implementations that wish to fully support extensions <em class="rfc2119" title="SHOULD">SHOULD</em> use [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] mechanisms.
+      For extensions, [<cite><a href="#bib-JSON-LD" class="bibref">JSON-LD</a></cite>] is used as the primary mechanism for defining and disambiguating extensions. Implementations that wish to fully support extensions <em title="SHOULD" class="rfc2119">SHOULD</em> use [<cite><a href="#bib-JSON-LD" class="bibref">JSON-LD</a></cite>] mechanisms.
     </p>
 
     <p>
       It is important to note that the JSON-LD Processing Algorithms [
-      <cite><a class="bibref" href="#bib-JSON-LD-API">JSON-LD-API</a></cite>], as currently defined, will silently ignore any property not defined in a JSON-LD @context. Implementations that publish Activity Streams 2.0 documents containing extension properties <em class="rfc2119" title="SHOULD">SHOULD</em> provide a @context definition for all extensions.
+      <cite><a href="#bib-JSON-LD-API" class="bibref">JSON-LD-API</a></cite>], as currently defined, will silently ignore any property not defined in a JSON-LD @context. Implementations that publish Activity Streams 2.0 documents containing extension properties <em title="SHOULD" class="rfc2119">SHOULD</em> provide a @context definition for all extensions.
     </p>
 
     <p>
@@ -2036,8 +2037,8 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </div>
     </figure>
 
-    <section id="compact-uris" typeof="bibo:Chapter" resource="#compact-uris" property="bibo:hasPart">
-      <h3 id="h-compact-uris" resource="#h-compact-uris"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Support for Compact URIs</span></h3>
+    <section property="bibo:hasPart" resource="#compact-uris" typeof="bibo:Chapter" id="compact-uris">
+      <h3 resource="#h-compact-uris" id="h-compact-uris"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.1 </span>Support for Compact URIs</span></h3>
 
       <p>
         The JSON-LD syntax supports the use of "Compact URIs". A "Compact URI" is an alternative encoding of a URI that uses a defined prefix to simplify serialization. For instance, the URI
@@ -2077,22 +2078,22 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
       <p>
         Activity Streams 2.0 implementations that wish to fully support extensions
-        <em class="rfc2119" title="MUST">MUST</em> support Compact URI expansion as defined by the JSON-LD specification. Such expansion applies to all property names as well as all property values explicitly defined as type <code>@id</code> in the JSON-LD @context.
+        <em title="MUST" class="rfc2119">MUST</em> support Compact URI expansion as defined by the JSON-LD specification. Such expansion applies to all property names as well as all property values explicitly defined as type <code>@id</code> in the JSON-LD @context.
       </p>
 
       <p>
         Over reliance on the Compact URI form can lead to ambiguity and interoperability issues between implementations. Therefore, Compact URI use
-        <em class="rfc2119" title="SHOULD">SHOULD</em> be avoided in all cases other than property names and the value(s) of the <code>type</code> property.
+        <em title="SHOULD" class="rfc2119">SHOULD</em> be avoided in all cases other than property names and the value(s) of the <code>type</code> property.
       </p>
 
     </section>
 
-    <section id="extension-round-trip" typeof="bibo:Chapter" resource="#extension-round-trip" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#extension-round-trip" typeof="bibo:Chapter" id="extension-round-trip">
 
-      <h3 id="h-extension-round-trip" resource="#h-extension-round-trip"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2 </span>Re-serialization of Extensions</span></h3>
+      <h3 resource="#h-extension-round-trip" id="h-extension-round-trip"><span property="xhv:role" resource="xhv:heading"><span class="secno">5.2 </span>Re-serialization of Extensions</span></h3>
 
       <p>
-        Implementations that use JSON-LD mechanisms to parse and then reserialize Activity Streams 2.0 documents that contain extension properties <em class="rfc2119" title="SHOULD">SHOULD</em> take sufficient care to ensure that extension properties used within the original document are preserved and serialized appropriately.
+        Implementations that use JSON-LD mechanisms to parse and then reserialize Activity Streams 2.0 documents that contain extension properties <em title="SHOULD" class="rfc2119">SHOULD</em> take sufficient care to ensure that extension properties used within the original document are preserved and serialized appropriately.
       </p>
 
       <p>
@@ -2140,16 +2141,16 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
       </figure>
 
       <p>
-        While this is close to the original, the use of fully expanded URI label for the <code>foo</code> property is not ideal. To ensure that the reserialized object is serialized correctly, implementations that perform JSON-LD expansion of received documents <em class="rfc2119" title="SHOULD">SHOULD</em> preserve the original <code>@context</code> used when performing the JSON-LD expansion, then reuse that when reserializing the object into the JSON-LD compacted form.
+        While this is close to the original, the use of fully expanded URI label for the <code>foo</code> property is not ideal. To ensure that the reserialized object is serialized correctly, implementations that perform JSON-LD expansion of received documents <em title="SHOULD" class="rfc2119">SHOULD</em> preserve the original <code>@context</code> used when performing the JSON-LD expansion, then reuse that when reserializing the object into the JSON-LD compacted form.
       </p>
 
     </section>
 
   </section>
 
-  <section id="privacy" typeof="bibo:Chapter" resource="#privacy" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#privacy" typeof="bibo:Chapter" id="privacy">
     <!--OddPage-->
-    <h2 id="h-privacy" resource="#h-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Privacy Considerations</span></h2>
+    <h2 resource="#h-privacy" id="h-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Privacy Considerations</span></h2>
 
     <p>
       Activity Streams 2.0 documents can (and likely will) contain potentially sensitive personal information such as identity, contact information, physical location, physical characteristics, and so forth. Furthermore, Activity data, in general, can be analyzed to generate profiles of the behavior of individual or groups of Actors.
@@ -2157,15 +2158,15 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
     <p>
       Implementations that produce or consume Activity Streams 2.0 documents
-      <em class="rfc2119" title="MUST">MUST</em> take steps to openly and publicly document and communicate to all potential users: (a) the kinds of potentially sensitive personal information published, consumed or collected by the implementation, (b) the reasons for publishing, consuming and collecting that information, (c) the manner in which that information is being used, (d) the identity of any other party with whom that information is being shared, and (e) the reason the information is being shared with other parties.
+      <em title="MUST" class="rfc2119">MUST</em> take steps to openly and publicly document and communicate to all potential users: (a) the kinds of potentially sensitive personal information published, consumed or collected by the implementation, (b) the reasons for publishing, consuming and collecting that information, (c) the manner in which that information is being used, (d) the identity of any other party with whom that information is being shared, and (e) the reason the information is being shared with other parties.
     </p>
 
     <p>
-      Implementations that publish Activity Streams 2.0 documents <em class="rfc2119" title="SHOULD">SHOULD</em> assume a default position of limiting both the kind and amount of sensitive personal information included in the document unless users have "opted in" to sharing additional detail.
+      Implementations that publish Activity Streams 2.0 documents <em title="SHOULD" class="rfc2119">SHOULD</em> assume a default position of limiting both the kind and amount of sensitive personal information included in the document unless users have "opted in" to sharing additional detail.
     </p>
 
     <p>
-      Implementations that consume Activity Streams 2.0 documents <em class="rfc2119" title="SHOULD NOT">SHOULD NOT</em>, by default, store or share sensitive personal information included within consumed documents unless users have "opted in" to allowing that information to be stored or shared.
+      Implementations that consume Activity Streams 2.0 documents <em title="SHOULD NOT" class="rfc2119">SHOULD NOT</em>, by default, store or share sensitive personal information included within consumed documents unless users have "opted in" to allowing that information to be stored or shared.
     </p>
 
     <p>
@@ -2174,10 +2175,10 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
 
   </section>
 
-  <section id="security-considerations" typeof="bibo:Chapter" resource="#security-considerations" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#security-considerations" typeof="bibo:Chapter" id="security-considerations">
 
     <!--OddPage-->
-    <h2 id="h-security-considerations" resource="#h-security-considerations"><span property="xhv:role" resource="xhv:heading"><span class="secno">7. </span>Security Considerations</span></h2>
+    <h2 resource="#h-security-considerations" id="h-security-considerations"><span property="xhv:role" resource="xhv:heading"><span class="secno">7. </span>Security Considerations</span></h2>
 
     <p>
       Publishers or Consumers implementing Activity Streams as a stream of public data may also want to consider the potential for unsolicited commercial or malicious content and should take preventative measures to recognize such content and either identify it or not include it in their implementations.
@@ -2188,7 +2189,7 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
     </p>
 
     <p>
-      Consumers that re-emit ingested content to end-users <em class="rfc2119" title="MUST">MUST</em> take reasonable measures if emitting ingested content to make sure potentially malicious ingested input is not re-emitted.
+      Consumers that re-emit ingested content to end-users <em title="MUST" class="rfc2119">MUST</em> take reasonable measures if emitting ingested content to make sure potentially malicious ingested input is not re-emitted.
     </p>
 
     <p>
@@ -2200,31 +2201,31 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
     </p>
 
     <p>
-      Activity Streams are JSON Documents and are subject to the same security considerations described in [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].
+      Activity Streams are JSON Documents and are subject to the same security considerations described in [<cite><a href="#bib-RFC7159" class="bibref">RFC7159</a></cite>].
     </p>
 
     <p>
       Activity Streams implementations handle URIs. See Section 7 of [
-      <cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>].
+      <cite><a href="#bib-RFC3986" class="bibref">RFC3986</a></cite>].
     </p>
 
     <p>
       Activity Streams implementations handle IRIs. See Section 8 of [
-      <cite><a class="bibref" href="#bib-RFC3987">RFC3987</a></cite>].
+      <cite><a href="#bib-RFC3987" class="bibref">RFC3987</a></cite>].
     </p>
 
   </section>
 
-  <section id="iana" typeof="bibo:Chapter" resource="#iana" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#iana" typeof="bibo:Chapter" id="iana">
 
     <!--OddPage-->
-    <h2 id="h-iana" resource="#h-iana"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span>IANA Considerations</span></h2>
+    <h2 resource="#h-iana" id="h-iana"><span property="xhv:role" resource="xhv:heading"><span class="secno">8. </span>IANA Considerations</span></h2>
 
-    <section id="media-type" typeof="bibo:Chapter" resource="#media-type" property="bibo:hasPart">
-      <h3 id="h-media-type" resource="#h-media-type"><span property="xhv:role" resource="xhv:heading"><span class="secno">8.1 </span>The <code>application/activity+json</code> Media Type</span></h3>
+    <section property="bibo:hasPart" resource="#media-type" typeof="bibo:Chapter" id="media-type">
+      <h3 resource="#h-media-type" id="h-media-type"><span property="xhv:role" resource="xhv:heading"><span class="secno">8.1 </span>The <code>application/activity+json</code> Media Type</span></h3>
 
       <p>
-        This specification registers the <code><dfn data-dfn-type="dfn" id="dfn-application-activity-json">application/activity+json</dfn></code> MIME Media Type specifically for identifying documents conforming to the Activity Streams 2.0 format.
+        This specification registers the <code><dfn id="dfn-application-activity-json" data-dfn-type="dfn">application/activity+json</dfn></code> MIME Media Type specifically for identifying documents conforming to the Activity Streams 2.0 format.
       </p>
 
       <table>
@@ -2244,16 +2245,16 @@ as2-date-time    = full-date <span class="hljs-string">"T"</span> as2-full-time
           <tr>
             <td>Optional parameters: </td>
             <td>
-              profile: The profile parameter for the application/activity+json media type allows one or more profile URIs to be specified. These profile URIs have the identifier semantics defined in [<cite><a class="bibref" href="#bib-RFC6906">RFC6906</a></cite>]. The "profile" media type parameter <em class="rfc2119" title="MUST">MUST</em> be quoted. It contains a non-empty list of space-separated URIs (the profile URIs).
+              profile: The profile parameter for the application/activity+json media type allows one or more profile URIs to be specified. These profile URIs have the identifier semantics defined in [<cite><a href="#bib-RFC6906" class="bibref">RFC6906</a></cite>]. The "profile" media type parameter <em title="MUST" class="rfc2119">MUST</em> be quoted. It contains a non-empty list of space-separated URIs (the profile URIs).
               <pre class="hljs javascript">profile-param = <span class="hljs-string">"profile="</span> profile-value
 profile-value = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">"</span>&gt;</span> profile-URI 0*( 1*SP profile-URI ) <span class="hljs-tag">&lt;<span class="hljs-name">"</span>&gt;</span>
-profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "URI" as defined in Section 3 of [<cite><a class="bibref" href="#bib-RFC3986">RFC3986</a></cite>].
+profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "URI" as defined in Section 3 of [<cite><a href="#bib-RFC3986" class="bibref">RFC3986</a></cite>].
             </td>
           </tr>
           <tr>
             <td>Encoding considerations: </td>
             <td>
-              Resources that use the "<code>application/activity+json</code>" Media Type are required to conform to all of the requirements for the "<code>application/json</code>" Media Type and are therefore subject to the same encoding considerations specified in Section 11 of [<cite><a class="bibref" href="#bib-RFC7159">RFC7159</a></cite>].
+              Resources that use the "<code>application/activity+json</code>" Media Type are required to conform to all of the requirements for the "<code>application/json</code>" Media Type and are therefore subject to the same encoding considerations specified in Section 11 of [<cite><a href="#bib-RFC7159" class="bibref">RFC7159</a></cite>].
             </td>
           </tr>
           <tr>
@@ -2274,25 +2275,25 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
       </p>
 
       <p>
-        Because Activity Streams 2.0 can be considered a restricted profile of JSON-LD, Implementations <em class="rfc2119" title="SHOULD">SHOULD</em> consider the `application/ld+json; profile="https://www.w3.org/ns/activitystreams"` media type as being equivalent to `application/activity+json`.
+        Because Activity Streams 2.0 can be considered a restricted profile of JSON-LD, Implementations <em title="SHOULD" class="rfc2119">SHOULD</em> consider the `application/ld+json; profile="https://www.w3.org/ns/activitystreams"` media type as being equivalent to `application/activity+json`.
       </p>
 
     </section>
 
   </section>
 
-  <section id="conformance" typeof="bibo:Chapter" resource="#conformance" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#conformance" typeof="bibo:Chapter" id="conformance">
 
     <!--OddPage-->
-    <h2 id="h-conformance" resource="#h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">9. </span>Conformance</span></h2>
+    <h2 resource="#h-conformance" id="h-conformance"><span property="xhv:role" resource="xhv:heading"><span class="secno">9. </span>Conformance</span></h2>
 
     <p>
       All diagrams, examples, and notes in this specification are non-normative, as are all sections explicitly marked non-normative. Everything else in this specification is normative.
     </p>
 
-    <section id="documents" typeof="bibo:Chapter" resource="#documents" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#documents" typeof="bibo:Chapter" id="documents">
 
-      <h3 id="h-documents" resource="#h-documents"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.1 </span>Documents</span></h3>
+      <h3 resource="#h-documents" id="h-documents"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.1 </span>Documents</span></h3>
 
       <p>
         Conforming documents are those that comply with all the conformance criteria for documents. For readability, some of these conformance requirements are phrased as conformance requirements on publishers; such requirements are implicitly requirements on documents: by definition, all documents are assumed to have a publisher.
@@ -2332,17 +2333,17 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
     </section>
 
-    <section id="implementations" typeof="bibo:Chapter" resource="#implementations" property="bibo:hasPart">
+    <section property="bibo:hasPart" resource="#implementations" typeof="bibo:Chapter" id="implementations">
 
-      <h3 id="h-implementations" resource="#h-implementations"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>Implementations</span></h3>
+      <h3 resource="#h-implementations" id="h-implementations"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2 </span>Implementations</span></h3>
 
       <p>
         Conforming implementations are software that publish, store, analyze, consume or otherwise process conforming documents. The two main kinds of implementations are publishers and consumers.
       </p>
 
-      <section id="publishers" typeof="bibo:Chapter" resource="#publishers" property="bibo:hasPart">
+      <section property="bibo:hasPart" resource="#publishers" typeof="bibo:Chapter" id="publishers">
 
-        <h4 id="h-publishers" resource="#h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>Publishers</span></h4>
+        <h4 resource="#h-publishers" id="h-publishers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.1 </span>Publishers</span></h4>
 
         <p>
           Conforming publishers are implementations that create and publish conforming documents. Conforming publishers must make conforming documents available according to the serialization requirements of section 2. Conforming publishers must consider privacy as described in section 6. Conforming publishers must consider security as described in section 7.
@@ -2373,9 +2374,9 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
       </section>
 
-      <section id="consumers" typeof="bibo:Chapter" resource="#consumers" property="bibo:hasPart">
+      <section property="bibo:hasPart" resource="#consumers" typeof="bibo:Chapter" id="consumers">
 
-        <h4 id="h-consumers" resource="#h-consumers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.2 </span>Consumers</span></h4>
+        <h4 resource="#h-consumers" id="h-consumers"><span property="xhv:role" resource="xhv:heading"><span class="secno">9.2.2 </span>Consumers</span></h4>
 
         <p>
           Conforming consumers are implementations that read and analyze conforming documents. Conforming consumers must tolerate deprecated or obsolete properties or types from Activity Streams 1.0. Conforming consumers must ignore properties or types that are not applicable to their application domain.
@@ -2417,10 +2418,10 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
   </section>
 
-  <section class="appendix" id="acknowledgements" typeof="bibo:Chapter" resource="#acknowledgements" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#acknowledgements" typeof="bibo:Chapter" id="acknowledgements" class="appendix">
 
     <!--OddPage-->
-    <h2 id="h-acknowledgements" resource="#h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Acknowledgements</span></h2>
+    <h2 resource="#h-acknowledgements" id="h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Acknowledgements</span></h2>
 
     <p>
       The Activity Streams 2.0 specification is a product of the <abbr title="World Wide Web Consortium">W3C</abbr> Social Web Working Group. The editors thank all of the Working Group members who contributed to the conversations, issues and testing that helped shape the current specification.
@@ -2432,26 +2433,26 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
   </section>
 
-  <section id="activitystreams-1.0a" class="appendix informative" typeof="bibo:Chapter" resource="#activitystreams-1.0a" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#activitystreams-1.0a" typeof="bibo:Chapter" id="activitystreams-1.0a" class="appendix informative">
 
     <!--OddPage-->
-    <h2 id="h-activitystreams-1.0a" resource="#h-activitystreams-1.0a"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</span></h2>
+    <h2 resource="#h-activitystreams-1.0a" id="h-activitystreams-1.0a"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Deprecated Activity Streams 1.0 Syntax</span></h2>
     <p><em>This section is non-normative.</em></p>
 
     <p>
-      Note: While this appendix sections is non-normative, it uses normative terms such as <em class="rfc2119" title="MUST">MUST</em>. Where used, the meaning is to indicate what would be required to properly implement the Activity Streams 1.0 backwards compatibility model described in this appendix if an implementer chose to do so.
+      Note: While this appendix sections is non-normative, it uses normative terms such as <em title="MUST" class="rfc2119">MUST</em>. Where used, the meaning is to indicate what would be required to properly implement the Activity Streams 1.0 backwards compatibility model described in this appendix if an implementer chose to do so.
     </p>
     <p>
 
     </p>
     <p>
       While the syntax defined by this specification diverges from that defined by JSON Activity Streams 1.0, the fundamental model defined by that original specification remains intact. Specific
-      <a href="#deprecated-syntax">processing rules</a> are defined by this specification that allow existing Activity Streams 1.0 documents to be mapped to and processed as an Activity Streams 2.0 document.
+      <a href="#activitystreams-1.0a">processing rules</a> are defined by this specification that allow existing Activity Streams 1.0 documents to be mapped to and processed as an Activity Streams 2.0 document.
     </p>
 
     <p>
       The JSON syntax defined by this specification differs somewhat from that defined in the original JSON Activity Streams 1.0 [
-      <cite><a class="bibref" href="#bib-AS1">AS1</a></cite>] specification in ways that are not backwards compatible. Implementations can choose to continue supporting the JSON Activity Streams 1.0 syntax but ought consider it to be deprecated. This means that while implementations can continue to consume the 1.0 syntax, they should not output the 1.0 syntax unless specifically interacting with older non-2.0 compliant implementations.
+      <cite><a href="#bib-AS1" class="bibref">AS1</a></cite>] specification in ways that are not backwards compatible. Implementations can choose to continue supporting the JSON Activity Streams 1.0 syntax but ought consider it to be deprecated. This means that while implementations can continue to consume the 1.0 syntax, they should not output the 1.0 syntax unless specifically interacting with older non-2.0 compliant implementations.
     </p>
 
     <p>
@@ -2463,7 +2464,7 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
         Implementations can use the "<code>application/stream+json</code>" MIME media type when producing a JSON serialization using the Activity Streams 1.0 syntax, and "<code>application/activity+json</code>" when producing a serialization conforming to the 2.0 syntax.
       </li>
       <li>
-        Implementations that process serializations identified using either the "<code>application/stream+json</code>" or the more generic "<code>application/json</code>" MIME media type <em class="rfc2119" title="MUST">MUST</em> follow the syntax and processing rules set by [<cite><a class="bibref" href="#bib-AS1">AS1</a></cite>]. The 2.0 syntax and processing rules apply only when handling serializations using the "<code>application/activity+json</code>" media type.
+        Implementations that process serializations identified using either the "<code>application/stream+json</code>" or the more generic "<code>application/json</code>" MIME media type <em title="MUST" class="rfc2119">MUST</em> follow the syntax and processing rules set by [<cite><a href="#bib-AS1" class="bibref">AS1</a></cite>]. The 2.0 syntax and processing rules apply only when handling serializations using the "<code>application/activity+json</code>" media type.
       </li>
       <li>
         When processing Activity Streams 1.0 documents using a JSON-LD processing model, implementations can use the special AS 1.0 to AS 2.0 expansion @context definition provided
@@ -2489,17 +2490,17 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
       </li>
       <li>
         This document redefines a large number of common properties defined originally as Objects in 1.0 as either
-        <a data-lt="Object" href="#asobject" class="internalDFN" data-link-type="dfn">Objects</a> or <a data-lt="Link" href="#dfn-link" class="internalDFN" data-link-type="dfn">Links</a>. The JSON-LD serialization allows such property values to be expressed as either an IRI String, an JSON object, or an Array of IRI Strings and JSON objects. Because the 1.0 values are a valid subset allowed by this specification, existing implementations are not required to take any specific action to continue supporting those values.
+        <a data-link-type="dfn" class="internalDFN" href="#asobject" data-lt="Object">Objects</a> or <a data-link-type="dfn" class="internalDFN" href="#dfn-link" data-lt="Link">Links</a>. The JSON-LD serialization allows such property values to be expressed as either an IRI String, an JSON object, or an Array of IRI Strings and JSON objects. Because the 1.0 values are a valid subset allowed by this specification, existing implementations are not required to take any specific action to continue supporting those values.
       </li>
       <li>
         This specification deprecates the <code>upstreamDuplicates</code> and
         <code>downstreamDuplicates</code> properties defined by Activity Streams 1.0 and does not provide a replacement. This is due largely to lack of any reasonable implementation evidence. While the
-        <code>upstreamDuplicates</code> and <code>downstreamDuplicates</code> properties <em class="rfc2119" title="MAY">MAY</em> continue to be used, implementations <em class="rfc2119" title="SHOULD">SHOULD</em> avoid them.
+        <code>upstreamDuplicates</code> and <code>downstreamDuplicates</code> properties <em title="MAY" class="rfc2119">MAY</em> continue to be used, implementations <em title="SHOULD" class="rfc2119">SHOULD</em> avoid them.
       </li>
       <li>
         In Activity Streams 1.0, the "<code>post</code>" verb was defined to describe the action of both creating an object and "posting" or uploading it to a service. This specification replaces the "<code>post</code>" verb with separate
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code> and
-        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code> Activity types. When processing Activity Streams 1.0 documents and converting those into 2.0, implementations <em class="rfc2119" title="SHOULD">SHOULD</em> treat instances of the "
+        <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add">Add</a></code> Activity types. When processing Activity Streams 1.0 documents and converting those into 2.0, implementations <em title="SHOULD" class="rfc2119">SHOULD</em> treat instances of the "
         <code>post</code>" verb as equivalent to
         <code><a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-create">Create</a></code>
         <i>if there is no <code>target</code> property specified</i>; and equivalent to
@@ -2514,9 +2515,9 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
   </section>
 
-  <section class="appendix informative" id="example-using-multiple-vocabularies" typeof="bibo:Chapter" resource="#example-using-multiple-vocabularies" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#example-using-multiple-vocabularies" typeof="bibo:Chapter" id="example-using-multiple-vocabularies" class="appendix informative">
     <!--OddPage-->
-    <h2 id="h-example-using-multiple-vocabularies" resource="#h-example-using-multiple-vocabularies"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Example using Multiple Vocabularies</span></h2>
+    <h2 resource="#h-example-using-multiple-vocabularies" id="h-example-using-multiple-vocabularies"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>Example using Multiple Vocabularies</span></h2>
     <p><em>This section is non-normative.</em></p>
 
     <p>
@@ -2590,10 +2591,10 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
     </figure>
   </section>
 
-  <section class="appendix informative" id="changelog" typeof="bibo:Chapter" resource="#changelog" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#changelog" typeof="bibo:Chapter" class="appendix informative" id="changelog">
 
     <!--OddPage-->
-    <h2 id="h-changelog" resource="#h-changelog"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Changelog</span></h2>
+    <h2 resource="#h-changelog" id="h-changelog"><span property="xhv:role" resource="xhv:heading"><span class="secno">D. </span>Changelog</span></h2>
     <p><em>This section is non-normative.</em></p>
 
     <p>
@@ -2617,9 +2618,9 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
   </section>
 
-  <section id="tof" typeof="bibo:Chapter" resource="#tof" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#tof" typeof="bibo:Chapter" id="tof">
     <!--OddPage-->
-    <h2 id="h-tof" resource="#h-tof"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>Table of Figures</span></h2>
+    <h2 resource="#h-tof" id="h-tof"><span property="xhv:role" resource="xhv:heading"><span class="secno">E. </span>Table of Figures</span></h2>
     <ul class="tof">
       <li class="tofline"><a class="tocxref" href="#fig-expresses-the-statement-http-www.test.example-martin-created-http-example.org-foo.jpg-.-no-additional-detail-is-given.x">Fig. <span class="figno">1</span> <span class="fig-title">
     Expresses the statement <code>'http://www.test.example/martin' created
@@ -2717,48 +2718,48 @@ profile-URI   = URI</span></pre> The "URI" in the above grammar refers to the "U
 
 
 
-  <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
+  <section property="bibo:hasPart" resource="#references" typeof="bibo:Chapter" id="references" class="appendix">
     <!--OddPage-->
-    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F. </span>References</span></h2>
+    <h2 resource="#h-references" id="h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F. </span>References</span></h2>
 
-    <section id="normative-references" typeof="bibo:Chapter" resource="#normative-references" property="bibo:hasPart">
-      <h3 id="h-normative-references" resource="#h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.1 </span>Normative references</span></h3>
-      <dl class="bibliography" resource=""><dt id="bib-BCP47">[BCP47]</dt>
-        <dd>A. Phillips; M. Davis. IETF. <a href="https://tools.ietf.org/html/bcp47" property="dc:requires"><cite>Tags for Identifying Languages</cite></a>. September 2009. IETF Best Current Practice. URL: <a href="https://tools.ietf.org/html/bcp47" property="dc:requires">https://tools.ietf.org/html/bcp47</a>
+    <section property="bibo:hasPart" resource="#normative-references" typeof="bibo:Chapter" id="normative-references">
+      <h3 resource="#h-normative-references" id="h-normative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.1 </span>Normative references</span></h3>
+      <dl resource="" class="bibliography"><dt id="bib-BCP47">[BCP47]</dt>
+        <dd>A. Phillips; M. Davis. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/bcp47"><cite>Tags for Identifying Languages</cite></a>. September 2009. IETF Best Current Practice. URL: <a property="dc:requires" href="https://tools.ietf.org/html/bcp47">https://tools.ietf.org/html/bcp47</a>
         </dd><dt id="bib-BIDI">[BIDI]</dt>
-        <dd>Mark Davis; Aharon Lanin; Andrew Glass. Unicode Consortium. <a href="http://www.unicode.org/reports/tr9/" property="dc:requires"><cite>Unicode Bidirectional Algorithm</cite></a>. 5 June 2014. Unicode Standard Annex #9. URL: <a href="http://www.unicode.org/reports/tr9/" property="dc:requires">http://www.unicode.org/reports/tr9/</a>
+        <dd>Mark Davis; Aharon Lanin; Andrew Glass. Unicode Consortium. <a property="dc:requires" href="http://www.unicode.org/reports/tr9/"><cite>Unicode Bidirectional Algorithm</cite></a>. 5 June 2014. Unicode Standard Annex #9. URL: <a property="dc:requires" href="http://www.unicode.org/reports/tr9/">http://www.unicode.org/reports/tr9/</a>
         </dd><dt id="bib-HTML5">[HTML5]</dt>
-        <dd>Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. <a href="https://www.w3.org/TR/html5/" property="dc:requires"><cite>HTML5</cite></a>. 28 October 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/" property="dc:requires">https://www.w3.org/TR/html5/</a>
+        <dd>Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. <a property="dc:requires" href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. 28 October 2014. W3C Recommendation. URL: <a property="dc:requires" href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a>
         </dd><dt id="bib-JSON-LD">[JSON-LD]</dt>
-        <dd>Manu Sporny; Gregg Kellogg; Markus Lanthaler. W3C. <a href="https://www.w3.org/TR/json-ld/" property="dc:requires"><cite>JSON-LD 1.0</cite></a>. 16 January 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld/" property="dc:requires">https://www.w3.org/TR/json-ld/</a>
+        <dd>Manu Sporny; Gregg Kellogg; Markus Lanthaler. W3C. <a property="dc:requires" href="https://www.w3.org/TR/json-ld/"><cite>JSON-LD 1.0</cite></a>. 16 January 2014. W3C Recommendation. URL: <a property="dc:requires" href="https://www.w3.org/TR/json-ld/">https://www.w3.org/TR/json-ld/</a>
         </dd><dt id="bib-JSON-LD-API">[JSON-LD-API]</dt>
-        <dd>Markus Lanthaler; Gregg Kellogg; Manu Sporny. W3C. <a href="https://www.w3.org/TR/json-ld-api/" property="dc:requires"><cite>JSON-LD 1.0 Processing Algorithms and API</cite></a>. 16 January 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld-api/" property="dc:requires">https://www.w3.org/TR/json-ld-api/</a>
+        <dd>Markus Lanthaler; Gregg Kellogg; Manu Sporny. W3C. <a property="dc:requires" href="https://www.w3.org/TR/json-ld-api/"><cite>JSON-LD 1.0 Processing Algorithms and API</cite></a>. 16 January 2014. W3C Recommendation. URL: <a property="dc:requires" href="https://www.w3.org/TR/json-ld-api/">https://www.w3.org/TR/json-ld-api/</a>
         </dd><dt id="bib-RFC2119">[RFC2119]</dt>
-        <dd>S. Bradner. IETF. <a href="https://tools.ietf.org/html/rfc2119" property="dc:requires"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119" property="dc:requires">https://tools.ietf.org/html/rfc2119</a>
+        <dd>S. Bradner. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. March 1997. Best Current Practice. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
         </dd><dt id="bib-RFC3339">[RFC3339]</dt>
-        <dd>G. Klyne; C. Newman. IETF. <a href="https://tools.ietf.org/html/rfc3339" property="dc:requires"><cite>Date and Time on the Internet: Timestamps</cite></a>. July 2002. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc3339" property="dc:requires">https://tools.ietf.org/html/rfc3339</a>
+        <dd>G. Klyne; C. Newman. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc3339"><cite>Date and Time on the Internet: Timestamps</cite></a>. July 2002. Proposed Standard. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc3339">https://tools.ietf.org/html/rfc3339</a>
         </dd><dt id="bib-RFC3986">[RFC3986]</dt>
-        <dd>T. Berners-Lee; R. Fielding; L. Masinter. IETF. <a href="https://tools.ietf.org/html/rfc3986" property="dc:requires"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. January 2005. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc3986" property="dc:requires">https://tools.ietf.org/html/rfc3986</a>
+        <dd>T. Berners-Lee; R. Fielding; L. Masinter. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc3986"><cite>Uniform Resource Identifier (URI): Generic Syntax</cite></a>. January 2005. Internet Standard. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc3986">https://tools.ietf.org/html/rfc3986</a>
         </dd><dt id="bib-RFC3987">[RFC3987]</dt>
-        <dd>M. Duerst; M. Suignard. IETF. <a href="https://tools.ietf.org/html/rfc3987" property="dc:requires"><cite>Internationalized Resource Identifiers (IRIs)</cite></a>. January 2005. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc3987" property="dc:requires">https://tools.ietf.org/html/rfc3987</a>
+        <dd>M. Duerst; M. Suignard. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc3987"><cite>Internationalized Resource Identifiers (IRIs)</cite></a>. January 2005. Proposed Standard. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc3987">https://tools.ietf.org/html/rfc3987</a>
         </dd><dt id="bib-RFC5988">[RFC5988]</dt>
-        <dd>M. Nottingham. IETF. <a href="https://tools.ietf.org/html/rfc5988" property="dc:requires"><cite>Web Linking</cite></a>. October 2010. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc5988" property="dc:requires">https://tools.ietf.org/html/rfc5988</a>
+        <dd>M. Nottingham. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc5988"><cite>Web Linking</cite></a>. October 2010. Proposed Standard. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc5988">https://tools.ietf.org/html/rfc5988</a>
         </dd><dt id="bib-RFC6906">[RFC6906]</dt>
-        <dd>E. Wilde. IETF. <a href="https://tools.ietf.org/html/rfc6906" property="dc:requires"><cite>The 'profile' Link Relation Type</cite></a>. March 2013. Informational. URL: <a href="https://tools.ietf.org/html/rfc6906" property="dc:requires">https://tools.ietf.org/html/rfc6906</a>
+        <dd>E. Wilde. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc6906"><cite>The 'profile' Link Relation Type</cite></a>. March 2013. Informational. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc6906">https://tools.ietf.org/html/rfc6906</a>
         </dd><dt id="bib-RFC7159">[RFC7159]</dt>
-        <dd>T. Bray, Ed.. IETF. <a href="https://tools.ietf.org/html/rfc7159" property="dc:requires"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. March 2014. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc7159" property="dc:requires">https://tools.ietf.org/html/rfc7159</a>
+        <dd>T. Bray, Ed.. IETF. <a property="dc:requires" href="https://tools.ietf.org/html/rfc7159"><cite>The JavaScript Object Notation (JSON) Data Interchange Format</cite></a>. March 2014. Proposed Standard. URL: <a property="dc:requires" href="https://tools.ietf.org/html/rfc7159">https://tools.ietf.org/html/rfc7159</a>
         </dd>
       </dl>
     </section>
 
-    <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
-      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.2 </span>Informative references</span></h3>
-      <dl class="bibliography" resource=""><dt id="bib-ABNF">[ABNF]</dt>
-        <dd>D. Crocker, Ed.; P. Overell. IETF. <a href="https://tools.ietf.org/html/rfc5234" property="dc:references"><cite>Augmented BNF for Syntax Specifications: ABNF</cite></a>. January 2008. Internet Standard. URL: <a href="https://tools.ietf.org/html/rfc5234" property="dc:references">https://tools.ietf.org/html/rfc5234</a>
+    <section property="bibo:hasPart" resource="#informative-references" typeof="bibo:Chapter" id="informative-references">
+      <h3 resource="#h-informative-references" id="h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">F.2 </span>Informative references</span></h3>
+      <dl resource="" class="bibliography"><dt id="bib-ABNF">[ABNF]</dt>
+        <dd>D. Crocker, Ed.; P. Overell. IETF. <a property="dc:references" href="https://tools.ietf.org/html/rfc5234"><cite>Augmented BNF for Syntax Specifications: ABNF</cite></a>. January 2008. Internet Standard. URL: <a property="dc:references" href="https://tools.ietf.org/html/rfc5234">https://tools.ietf.org/html/rfc5234</a>
         </dd><dt id="bib-AS1">[AS1]</dt>
-        <dd>J. Snell; M. Atkins; W. Norris; C. Messina; M. Wilkinson; R. Dolin. http://activitystrea.ms. <a href="http://activitystrea.ms/specs/json/1.0/" property="dc:references"><cite>JSON Activity Streams 1.0</cite></a>. unofficial. URL: <a href="http://activitystrea.ms/specs/json/1.0/" property="dc:references">http://activitystrea.ms/specs/json/1.0/</a>
+        <dd>J. Snell; M. Atkins; W. Norris; C. Messina; M. Wilkinson; R. Dolin. http://activitystrea.ms. <a property="dc:references" href="http://activitystrea.ms/specs/json/1.0/"><cite>JSON Activity Streams 1.0</cite></a>. unofficial. URL: <a property="dc:references" href="http://activitystrea.ms/specs/json/1.0/">http://activitystrea.ms/specs/json/1.0/</a>
         </dd><dt id="bib-vcard-rdf">[vcard-rdf]</dt>
-        <dd>Renato Iannella; James McKinney. W3C. <a href="https://www.w3.org/TR/vcard-rdf/" property="dc:references"><cite>vCard Ontology - for describing People and Organizations</cite></a>. 22 May 2014. W3C Note. URL: <a href="https://www.w3.org/TR/vcard-rdf/" property="dc:references">https://www.w3.org/TR/vcard-rdf/</a>
+        <dd>Renato Iannella; James McKinney. W3C. <a property="dc:references" href="https://www.w3.org/TR/vcard-rdf/"><cite>vCard Ontology - for describing People and Organizations</cite></a>. 22 May 2014. W3C Note. URL: <a property="dc:references" href="https://www.w3.org/TR/vcard-rdf/">https://www.w3.org/TR/vcard-rdf/</a>
         </dd>
       </dl>
     </section>
