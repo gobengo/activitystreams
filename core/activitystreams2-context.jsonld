@@ -127,6 +127,10 @@
       "@id": "as:image",
       "@type": "@id"
     },
+    "inbox": {
+      "@id": "http://www.w3.org/ns/ldp#inbox",
+      "@type": "@id"
+    },
     "inReplyTo": {
       "@id": "as:inReplyTo",
       "@type": "@id"
